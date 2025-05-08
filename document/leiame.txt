@@ -1,0 +1,26 @@
+Nome do projeto:
+MistyBook
+
+Link da publicação do projeto:
+
+Participante e papeis:
+Tech Lead: Renan Zorzal Berger
+Desenvoldedor Front-end 1: Luis
+Desenvolvedor Front-end 2: Davi
+Designer UI/UX 1: Gabrielly
+Designer UI/UX 2: Samuel
+Redator: Luciano
+
+Objetivo principal do projeto:
+O objetivo principal do projeto é criar uma plataforma online que facilite a venda, troca, aluguel e assinatura de livros físicos e digitais. Busca-se promover o acesso à leitura, incentivar a economia colaborativa e apoiar autores independentes. A plataforma integrará recursos interativos, como um mapa geolocalizado, para aproximar leitores e vendedores.
+
+Descrição resumida do projeto:
+A proposta deste projeto é desenvolver uma plataforma online inovadora, funcionando como um sebo digital moderno, que permita aos usuários anunciar livros usados para venda, troca ou aluguel. O diferencial está na integração de um mapa interativo, que facilita a localização de exemplares disponíveis próximos à residência do usuário, promovendo a economia local e reduzindo custos de frete. A interface será intuitiva e acessível. O website permite que qualquer pessoa possa criar um perfil de comprador ou de vendedor. O vendedor pode cadastrar livros, cada anúncio poderá conter fotos, descrição do estado do livro, preço e formas de negociação. A plataforma também permitirá avaliações dos usuários, garantindo maior segurança nas transações. Um sistema de mensagens internas facilitará o contato entre as partes. O objetivo é criar uma comunidade de leitores ativos, colaborando para a circulação sustentável de livros. Com isso, promove-se o acesso à leitura e incentiva-se o reaproveitamento de materiais impressos.
+
+Além dos livros físicos, a plataforma contará com uma área dedicada aos ebooks, permitindo que autores independentes ou editoras vendam obras digitais diretamente ao público. Também será implementado um sistema de assinatura mensal, por meio do qual leitores poderão acessar uma biblioteca digital com diversos títulos, sendo os valores repassados proporcionalmente aos autores com base em leituras ou downloads. Esse modelo de monetização oferece oportunidade de renda recorrente para escritores e editoras, incentivando a produção literária. O sistema será protegido por DRM e contará com ferramentas de controle de acesso para proteger os direitos autorais.
+
+Descrição das paginas:
+navbar: Criar 2 navbar uma para cliente e um para vendedor. O vendedor tera acesso aos produtos anunciados e o status do produto (Alugado/Comprado/Disponivel/Indisponivel)
+index.html: Uma pagina inicial, vai oferecer uma opção para buscar por ebooks, livros fisicos ou acessar assinatura
+pagina01.html(tabela): Ira mostrar os produtos do vendedor em uma tabela
+pagina02.html(grid): Ir para uma pagina que vai mostrar todos os produtos
