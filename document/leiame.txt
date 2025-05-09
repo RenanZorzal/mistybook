@@ -23,7 +23,7 @@ Descrição das paginas:
 navbar: Criar 3 navbar uma para cliente, um para vendedor e outra para deslogado. O vendedor tera acesso aos produtos anunciados e o status do produto (Alugado/Comprado/Disponivel/Indisponivel)
 index.html: Uma pagina inicial, vai oferecer uma opção para buscar por ebooks, livros fisicos ou acessar assinatura
 pagina01.html(tabela): Ira mostrar os produtos do vendedor em uma tabela
-pagina02.html(grid): Ir para uma pagina que vai mostrar todos os livros
+pagina02.html(grid): Ir para uma pagina que vai mostrar todos os livros no determinado filtro.
 pagina03.html(formulario get): registro, login e cadastrar produto
 pagina04.html(mapas clicaveis): Uma pagina que tera um mapa que ao clicar ira filtrar os livros por região
-pagina05.html (landing page): Pagina que ao clicar ira provomer a assinatura de livros do site, tera 2 botões 1º Assinar e 2º voltar para o home(index.php)
+pagina05.html (landing page): Pagina que ao clicar ira provomer a assinatura de livros do site, tera 2 botões 1º Assinar e 2º voltar para o home(index.html)
