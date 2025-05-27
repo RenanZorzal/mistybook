@@ -1,14 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MistyBook</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <style>
+    /* Carrossel */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+     
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      height: 5%;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 30px;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!--
-        Aqui sera o home
-    -->
+
+<header>
+  <div class="navbar">
+    <div class="left-section">
+      <div class="logo">
+        <img src="images/Logovetor.png" alt="Logo">
+        MistyBook
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Buscar livro">
+      <span class="icon">🔍</span>
+    </div>
+
+    <div class="right-section">
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="Perfil"></div></a>
+    </div>
+  </div>
+
+  <div class="subnavbar">
+    <a href="#">Romance</a>
+    <a href="#">Aventura</a>
+    <a href="#">Terror</a>
+    <a href="#">Fantasia</a>
+    <a href="#">Suspense</a>
+    <a href="#">Infantil</a>
+    <a href="#">HQs</a>
+    <a href="#">Autoajuda</a>
+  </div>
+</header>
+
+<div class="carousel-container">
+  <div class="carousel-track">
+    <div class="carousel-item">
+      <img src="https://leitura.com.br/image/cache/catalog/LEITURA%20ROCCO-1920x300.jpg" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://leitura.com.br/image/cache/catalog/Banner%20Sextante%201%20-%201920x300-1920x300.jpg" alt="Banner 2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://leitura.com.br/image/cache/catalog/LEITURA%20ROCCO-1920x300.jpg" alt="Banner 3">
+    </div>
+    <div class="carousel-item">
+      <img src="https://leitura.com.br/image/cache/catalog/BANNERS_LEITURA_PHANTASMA%20(1)-1920x300.jpg" alt="Banner 3">
+    </div>
+  </div>
+  <button class="carousel-button prev">&#10094;</button>
+  <button class="carousel-button next">&#10095;</button>
+</div>
+<div style="width: 100%; height: 2%; display: flex; align-items: center; justify-content: center;">
+  <div style="margin-right: 10px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/12355/12355892.png" alt="" style="background-color: black; width: 100%; max-width: 90px; object-fit: cover; border-radius: 50%;">
+    <p style="text-align: center;"><b>Romance</b></p>
+  </div>
+  <div>
+    <img src="https://cdn-icons-png.flaticon.com/512/12355/12355892.png" alt="" style="background-color: black; width: 100%; max-width: 90px; object-fit: cover; border-radius: 50%;">
+    <p style="text-align: center;"><b>Romance</b></p>
+  </div>
+  <div>
+    <img src="https://cdn-icons-png.flaticon.com/512/12355/12355892.png" alt="" style="background-color: black; width: 100%; max-width: 90px; object-fit: cover; border-radius: 50%;">
+    <p style="text-align: center;"><b>Romance</b></p>
+  </div>
+
+
+
+<!--Script do carousel-->
+<script>
+  const track = document.querySelector('.carousel-track');
+  const items = document.querySelectorAll('.carousel-item');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const itemWidth = items[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+  }
+
+  function goToNext() {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  }
+
+  function goToPrev() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  }
+
+  nextButton.addEventListener('click', () => {
+    goToNext();
+    resetInterval();
+  });
+
+  prevButton.addEventListener('click', () => {
+    goToPrev();
+    resetInterval();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+
+  // Auto slide
+  let autoSlide = setInterval(goToNext, 3000); // troca a cada 3 segundos
+
+  function resetInterval() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(goToNext, 3000);
+  }
+
+  updateCarousel();
+</script>
 
 </body>
 </html>
