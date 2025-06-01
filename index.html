@@ -50,6 +50,23 @@
     .next {
       right: 10px;
     }
+
+    /*Icones categorias imagens*/
+    .container{
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 40px;
+    }
+    .divItem{
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .divBox{
+      background-color: black; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+    .imagemIcon{
+      width: 70%; object-fit: cover;
+    }
+    .textoCategoriasImg{
+text-align: center; margin-top: 5px;
+    }
   </style>
 </head>
 <body>
@@ -108,19 +125,69 @@
   <button class="carousel-button prev">&#10094;</button>
   <button class="carousel-button next">&#10095;</button>
 </div>
-<div style="width: 100%; height: 2%; display: flex; align-items: center; justify-content: center;">
-  <div style="margin-right: 10px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/12355/12355892.png" alt="" style="background-color: black; width: 100%; max-width: 90px; object-fit: cover; border-radius: 50%;">
-    <p style="text-align: center;"><b>Romance</b></p>
+
+<br>
+<div class="container">
+  <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/romance.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Romance</b></p>
   </div>
-  <div>
-    <img src="https://cdn-icons-png.flaticon.com/512/12355/12355892.png" alt="" style="background-color: black; width: 100%; max-width: 90px; object-fit: cover; border-radius: 50%;">
-    <p style="text-align: center;"><b>Romance</b></p>
+
+    <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/fantasia.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Fantasia</b></p>
   </div>
-  <div>
-    <img src="https://cdn-icons-png.flaticon.com/512/12355/12355892.png" alt="" style="background-color: black; width: 100%; max-width: 90px; object-fit: cover; border-radius: 50%;">
-    <p style="text-align: center;"><b>Romance</b></p>
+
+    <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/terror.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Terror</b></p>
   </div>
+
+    <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/quadrinhos.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Quadrinhos</b></p>
+  </div>
+
+      <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/religioso.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Religioso</b></p>
+  </div>
+
+        <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/negocios.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Negócios</b></p>
+  </div>
+
+          <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/ficcao.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Ficção</b></p>
+  </div>
+
+            <div class="divItem">
+    <div class="divBox">
+      <img src="images/iconCategorias/educacao.png" alt="" class="imagemIcon">
+    </div>
+    <p class="textoCategoriasImg"><b>Educação</b></p>
+  </div>
+
+</div>
+
+
+<h2 style="margin-left: 2%; margin-top: 2%;">Produtos</h2>
 
 
 
