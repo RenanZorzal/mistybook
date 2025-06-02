@@ -5,68 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MistyBook</title>
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/home.css">
   <style>
-    /* Carrossel */
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-     
-    }
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .carousel-item {
-      min-width: 100%;
-      height: 5%;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: 100%;
-      
-    }
-
-    .carousel-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      font-size: 30px;
-      padding: 5px 10px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
-
-    /*Icones categorias imagens*/
-    .container{
-      width: 100%; display: flex; align-items: center; justify-content: center; gap: 40px;
-    }
-    .divItem{
-      display: flex; flex-direction: column; align-items: center;
-    }
-    .divBox{
-      background-color: black; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    }
-    .imagemIcon{
-      width: 70%; object-fit: cover;
-    }
-    .textoCategoriasImg{
-text-align: center; margin-top: 5px;
-    }
+/*Produtos*/
+    
   </style>
 </head>
 <body>
@@ -75,7 +19,7 @@ text-align: center; margin-top: 5px;
   <div class="navbar">
     <div class="left-section">
       <div class="logo">
-        <img src="images/Logovetor.png" alt="Logo">
+        <img src="images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
         MistyBook
       </div>
     </div>
@@ -189,6 +133,126 @@ text-align: center; margin-top: 5px;
 
 <h2 style="margin-left: 2%; margin-top: 2%;">Produtos</h2>
 
+<section class="secao" id="grid-secao">
+  <div class="produto">
+    <img src="/images/Livros/Educação/A história do Brasil para quem tem pressa.jpeg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+  <div class="produto">
+    <img src="https://m.media-amazon.com/images/I/71xBLRBYOiL.jpg" alt="Harry Potter">
+    <div class="info">
+      <p class="preco">R$ 56</p>
+      <p class="titulo">Harry Potter e a Pedra Filosofal</p>
+      <div class="local-favorito">
+        <div class="local">
+          <span>📍</span>
+          <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+        </div>
+        <div class="favorito">🤍</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pode repetir os blocos acima para mais produtos -->
+</section>
 
 
 <!--Script do carousel-->
