@@ -70,12 +70,17 @@
   color: #777;
 }
 
-.local span {
+.local span img {
   margin-right: 5px;
+  width:25px; 
+  height: 25px; 
+  border-bottom: 0px;
 }
 
-.favorito {
-  font-size: 24px;
+.favorito img {
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   color: #f44336;
+  border-bottom: 0px;
 }

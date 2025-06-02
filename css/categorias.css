@@ -1,0 +1,16 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+.botaovoltar{
+    display: flex; margin-left: 2%; margin-top: 1%; width: 7%;
+}
+.iconvoltar{
+    width: 30px; height: 30px;
+}
+.margemHome{
+    margin-top: 1%;
+}
+.margemcategoria{
+    margin-left: 2%; margin-top: 2%;
+}
