@@ -1,7 +1,5 @@
-img{
-    width: 400px;
-    font-size: rig;
-}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   background: #fff;
   color: #333;
-  padding: 20px;
+  padding: 0px;
 }
 
 .produto-container {
