@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MistyBook</title>
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/grid.css">
+  <link rel="stylesheet" href="../css/categorias.css">
+  <link rel="stylesheet" href="../css/meusanuncios.css">
+  <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="left-section">
+        <div class="logo">
+          <img src="../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+          MistyBook
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Buscar livro">
+        <span class="icon">🔍</span>
+      </div>
+
+      <div class="right-section">
+        <a href="../mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+        <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+        <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
+        <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
+        <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
+        <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="Perfil"></div></a>
+      </div>
+    </div>
+
+    <div class="subnavbar">
+      <a href="../pages/categorias/romance.html">Romance</a>
+      <a href="../pages/categorias/fantasia.html">Fantasia</a>
+      <a href="../pages/categorias/terror.html">Terror</a>
+      <a href="../pages/categorias/quadrinhos.html">Quadrinhos</a>
+      <a href="../pages/categorias/religioso.html">Religioso</a>
+      <a href="../pages/categorias/negocios.html">Negócios</a>
+      <a href="../pages/categorias/ficcao.html">Ficção</a>
+      <a href="../pages/categorias/educacao.html">Educação</a>
+    </div>
+  </header>
+
+  <a href="../index.html">
+    <div class="botaovoltar">
+      <img src="../images/iconCategorias/voltar.png" alt="" class="iconvoltar">
+      <h2 class="margemhome">&nbsp;&nbsp;Home</h2>
+    </div>
+  </a>
+
+  
+  <h2>MEU PERFIL</h2>
+
+  <section class="perfil-container">
+  <div class="form-container">
+    <form>
+        <div class="imagem-perfil-preview">
+        <img id="preview" src="../images/livros/fantasia/A ascensão do dragão.jpeg" alt="Imagem de perfil">
+</div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nomeCliente">Nome</label>
+          <input type="text" id="nomeCliente" name="nomeCliente" class="shadow-box" placeholder="Seu nome" value="Renan Zorzal Berger">
+        </div>
+
+        <div class="form-group">
+          <label for="emailCliente">Email</label>
+          <input type="email" id="emailCliente" name="emailCliente" class="shadow-box" placeholder="email@exemplo.com" value="renan@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="cpfCliente">CPF</label>
+          <input type="text" id="cpfCliente" name="cpfCliente" class="shadow-box" value="157.809.860-29" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="telefoneCliente">Telefone</label>
+          <input type="text" id="telefoneCliente" name="telefoneCliente" class="shadow-box" placeholder="Telefone" value="(33) 91234-5678">
+        </div>
+
+        <div class="form-group">
+          <label for="dtNascCliente">Data de nascimento</label>
+          <input type="date" id="dtNascCliente" name="dtNascCliente" class="shadow-box" value="2005-07-23">
+        </div>
+
+        <div class="form-group">
+          <label for="arquivo">Imagem</label>
+          <input type="file" id="arquivo" name="arquivo" accept="image/*" class="shadow-box">
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-salvar">Salvar alterações</button>
+      </div>
+
+      <div class="form-links">
+        <a href="#">Alterar senha</a>
+        <a href="#">Minhas compras</a>
+        <a href="#">Minhas vendas</a>
+      </div>
+    </form>
+  </div>
+</section>
+</body>
+</html>
