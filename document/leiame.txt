@@ -28,3 +28,4 @@ pagina03.html(formulario get): registro, login e cadastrar produto
 pagina04.html(mapas clicaveis): Uma pagina que tera um mapa que ao clicar ira filtrar os livros por região
 pagina05.html (landing page): Pagina que ao clicar ira provomer a assinatura de livros do site, tera 2 botões 1º Assinar e 2º voltar para o home(index.html)
 pagina06.html (carrinho de compras): Ira mostrar o carrinho de compras e usar javascript para somar o preço
+pagina07.html (sobre): Pagina que vai mostrar os membros do projeto
