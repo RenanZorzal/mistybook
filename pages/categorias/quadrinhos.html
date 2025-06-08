@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/grid.css">
     <link rel="stylesheet" href="../../css/categorias.css">
-    
+    <style>
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -16,8 +19,8 @@
           <div class="left-section">
             <div class="logo">
               <a href="../../index.html">
-              <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;"></a>
-              MistyBook
+              <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+              <p class="nomePrincipal">MistyBook</p></a>
             </div>
           </div>
           
@@ -28,7 +31,27 @@
       
           <div class="right-section">
             <a href="../mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-            <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+            <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="../../images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="pages/meus-anuncios.html">Meus Anúncios</a>
+            <a href="pages/minhas-compras.html">Minhas Compras</a>
+          </div>
+        </div>
+        <script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+        </script>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
@@ -59,10 +82,11 @@
             <p class="titulo">Bleach</p>
             <div class="local-favorito">
               <div class="local">
-                <span><img src="../../images/iconCategorias/mapa.png"></span>
+                <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                 <p><b>Belo Horizonte - MG</b></p>
               </div>
-              <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+              <div class="favorito"><button class="btn-add-carrinho"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></button></div>
+              
             </div>
           </div>
         </div>
@@ -73,10 +97,10 @@
               <p class="titulo">Dandadan</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>São Paulo - SP</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -87,10 +111,10 @@
               <p class="titulo">Solo leveling</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>São Paulo - SP</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -101,10 +125,10 @@
               <p class="titulo">Bleach Box set 3</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>Rio de Janeiro - RJ</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -115,10 +139,10 @@
               <p class="titulo">Spiderman</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>Colatina - ES</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -130,10 +154,10 @@
               <p class="titulo">Batman</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>Cuiabá - MT</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -145,10 +169,10 @@
               <p class="titulo">Fire Force volume 1</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>Goiânia - GO</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -160,10 +184,10 @@
               <p class="titulo">HQ Batman A Piada Mortal</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>Salvador - BA</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -175,13 +199,33 @@
               <p class="titulo">Crise nas infinitas terras</p>
               <div class="local-favorito">
                 <div class="local">
-                  <span><img src="../../images/iconCategorias/mapa.png"></span>
+                  <span><img src="../../../../images/iconCategorias/mapa.png"></span>
                   <p><b>São Luís - MA</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
     </section>
+<script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const produto = this.closest('.produto');
+      const titulo = produto.querySelector('.titulo').innerText;
+      const preco = produto.querySelector('.preco').innerText;
+      const imagem = produto.querySelector('img').src; // <-- alterado aqui
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
+    
+
 </body>
 </html>

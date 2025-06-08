@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,837 +10,949 @@
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/categorias.css">
-
 </head>
+
 <body>
 
-<header>
-  <div class="navbar">
-    <div class="left-section">
-      <div class="logo">
-        <img src="images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
-        MistyBook
+  <header>
+    <div class="navbar">
+      <div class="left-section">
+        <div class="logo">
+          <a href="#">
+            <img src="images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+            <p class="nomePrincipal">MistyBook</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Buscar livro">
+        <span class="icon">🔍</span>
+      </div>
+
+      <div class="right-section">
+        <a href="pages/mapa.html">
+          <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização">
+          </div>
+        </a>
+        <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="pages/meus-anuncios.html">Meus Anúncios</a>
+            <a href="pages/minhas-compras.html">Minhas Compras</a>
+          </div>
+        </div>
+        <script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+        </script>
+
+        <a href="#">
+          <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div>
+        </a>
+        <a href="#">
+          <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png"
+              alt="Notificações"></div>
+        </a>
+        <a href="#">
+          <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho">
+          </div>
+        </a>
+        <a href="pages/perfil.html">
+          <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="Perfil">
+          </div>
+        </a>
       </div>
     </div>
 
-    <div class="search-box">
-      <input type="text" placeholder="Buscar livro">
-      <span class="icon">🔍</span>
+    <div class="subnavbar">
+      <a href="pages/categorias/romance.html">Romance</a>
+      <a href="pages/categorias/fantasia.html">Fantasia</a>
+      <a href="pages/categorias/terror.html">Terror</a>
+      <a href="pages/categorias/quadrinhos.html">Quadrinhos</a>
+      <a href="pages/categorias/religioso.html">Religioso</a>
+      <a href="pages/categorias/negocios.html">Negócios</a>
+      <a href="pages/categorias/ficcao.html">Ficção</a>
+      <a href="pages/categorias/educacao.html">Educação</a>
     </div>
+  </header>
 
-    <div class="right-section">
-      <a href="pages/mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
-      <a href="pages/perfil.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="Perfil"></div></a>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <img src="https://leitura.com.br/image/cache/catalog/LEITURA%20ROCCO-1920x300.jpg" alt="Banner 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://leitura.com.br/image/cache/catalog/Banner%20Sextante%201%20-%201920x300-1920x300.jpg"
+          alt="Banner 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://leitura.com.br/image/cache/catalog/LEITURA%20ROCCO-1920x300.jpg" alt="Banner 3">
+      </div>
+      <div class="carousel-item">
+        <img src="https://leitura.com.br/image/cache/catalog/BANNERS_LEITURA_PHANTASMA%20(1)-1920x300.jpg"
+          alt="Banner 3">
+      </div>
     </div>
+    <button class="carousel-button prev">&#10094;</button>
+    <button class="carousel-button next">&#10095;</button>
   </div>
 
-  <div class="subnavbar">
-    <a href="pages/categorias/romance.html">Romance</a>
-    <a href="pages/categorias/fantasia.html">Fantasia</a>
-    <a href="pages/categorias/terror.html">Terror</a>
-    <a href="pages/categorias/quadrinhos.html">Quadrinhos</a>
-    <a href="pages/categorias/religioso.html">Religioso</a>
-    <a href="pages/categorias/negocios.html">Negócios</a>
-    <a href="pages/categorias/ficcao.html">Ficção</a>
-    <a href="pages/categorias/educacao.html">Educação</a>
-  </div>
-</header>
-
-<div class="carousel-container">
-  <div class="carousel-track">
-    <div class="carousel-item">
-      <img src="https://leitura.com.br/image/cache/catalog/LEITURA%20ROCCO-1920x300.jpg" alt="Banner 1">
-    </div>
-    <div class="carousel-item">
-      <img src="https://leitura.com.br/image/cache/catalog/Banner%20Sextante%201%20-%201920x300-1920x300.jpg" alt="Banner 2">
-    </div>
-    <div class="carousel-item">
-      <img src="https://leitura.com.br/image/cache/catalog/LEITURA%20ROCCO-1920x300.jpg" alt="Banner 3">
-    </div>
-    <div class="carousel-item">
-      <img src="https://leitura.com.br/image/cache/catalog/BANNERS_LEITURA_PHANTASMA%20(1)-1920x300.jpg" alt="Banner 3">
-    </div>
-  </div>
-  <button class="carousel-button prev">&#10094;</button>
-  <button class="carousel-button next">&#10095;</button>
-</div>
-
-<br>
-<div class="container">
-  <a href="pages/categorias/romance.html">
-  <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/romance.png" alt="" class="imagemIcon">
-    </div>
-    <p class="textoCategoriasImg"><b>Romance</b></p>
-  </div>
-  </a>
-  <a href="pages/categorias/fantasia.html">
-    <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/fantasia.png" alt="" class="imagemIcon">
-    </div>
-    <p class="textoCategoriasImg"><b>Fantasia</b></p>
-  </div>
-  </a>
- <a href="pages/categorias/terror.html">
-    <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/terror.png" alt="" class="imagemIcon">
-    </div>
-    <p class="textoCategoriasImg"><b>Terror</b></p>
-  </div>
-</a>
- <a href="pages/categorias/quadrinhos.html">
-    <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/quadrinhos.png" alt="" class="imagemIcon">
-    </div>
-    <p class="textoCategoriasImg"><b>Quadrinhos</b></p>
-  </div>
-</a>
- <a href="pages/categorias/religioso.html">
+  <br>
+  <div class="container">
+    <a href="pages/categorias/romance.html">
       <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/religioso.png" alt="" class="imagemIcon">
-    </div>
-    <p class="textoCategoriasImg"><b>Religioso</b></p>
+        <div class="divBox">
+          <img src="images/iconCategorias/romance.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Romance</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/fantasia.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/fantasia.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Fantasia</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/terror.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/terror.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Terror</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/quadrinhos.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/quadrinhos.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Quadrinhos</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/religioso.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/religioso.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Religioso</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/negocios.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/negocios.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Negócios</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/ficcao.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/ficcao.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Ficção</b></p>
+      </div>
+    </a>
+    <a href="pages/categorias/educacao.html">
+      <div class="divItem">
+        <div class="divBox">
+          <img src="images/iconCategorias/educacao.png" alt="" class="imagemIcon">
+        </div>
+        <p class="textoCategoriasImg"><b>Educação</b></p>
+      </div>
+
   </div>
-</a>
- <a href="pages/categorias/negocios.html">
-        <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/negocios.png" alt="" class="imagemIcon">
+  </a>
+
+  <h2 style="margin-left: 2%; margin-top: 2%;">Produtos</h2>
+
+  <section class="secao" id="grid-secao">
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/bleach.html">
+        <img src="images/livros/quadrinhos/bleach.jpeg" alt="bleach">
+        <div class="info">
+          <p class="preco">R$ 120,00</p>
+          <p class="titulo">Bleach</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Belo Horizonte - MG</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/dandadan.html">
+        <img src="images/livros/quadrinhos/dandadan.jpeg" alt="dandadan">
+        <div class="info">
+          <p class="preco">R$ 56,00</p>
+          <p class="titulo">Dandadan</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>São Paulo - SP</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/sololeveling.html">
+        <img src="images/livros/quadrinhos/download (4).jpeg" alt="Solo leveling">
+        <div class="info">
+          <p class="preco">R$ 30,00</p>
+          <p class="titulo">Solo leveling</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>São Paulo - SP</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/boxbleach.html">
+        <img src="images/livros/quadrinhos/download (5).jpeg" alt="Bleach Box set 3">
+        <div class="info">
+          <p class="preco">R$ 95,00</p>
+          <p class="titulo">Bleach Box set 3</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Rio de Janeiro - RJ</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/spiderman.html">
+        <img src="images/livros/quadrinhos/download (6).jpeg" alt="Spiderman">
+        <div class="info">
+          <p class="preco">R$ 20,00</p>
+          <p class="titulo">Spiderman</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Colatina - ES</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/batman.html">
+        <img src="images/livros/quadrinhos/download (7).jpeg" alt="Batman">
+        <div class="info">
+          <p class="preco">R$ 25,00</p>
+          <p class="titulo">Batman</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Cuiabá - MT</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/fireforce.html">
+        <img src="images/livros/quadrinhos/Fire Force Volume 1.jpeg" alt="Fire Force volume 1">
+        <div class="info">
+          <p class="preco">R$ 15,00</p>
+          <p class="titulo">Fire Force volume 1</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Goiânia - GO</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/hqbatmanapiada.html">
+        <img src="images/livros/quadrinhos/HQ Batman A Piada Mortal 1° Edição Greg Cox.jpeg"
+          alt="HQ Batman A Piada Mortal">
+        <div class="info">
+          <p class="preco">R$ 17,00</p>
+          <p class="titulo">HQ Batman A Piada Mortal</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Salvador - BA</b></p>
+            </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
+          </div>
+        </div>
+    </div></a>
+
+    <div class="produto">
+      <img
+        src="images/livros/quadrinhos/Hq Dc Graphic Novels Saga Definitiva_ Crise Nas Infinitas Terras, De Grant Morrison.jpeg"
+        alt="Crise nas infinitas terras">
+      <div class="info">
+        <p class="preco">R$ 45,00</p>
+        <p class="titulo">Crise nas infinitas terras</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>São Luís - MA</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
     </div>
-    <p class="textoCategoriasImg"><b>Negócios</b></p>
-  </div>
-</a>
-<a href="pages/categorias/ficcao.html">
-          <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/ficcao.png" alt="" class="imagemIcon">
+
+    <div class="produto">
+      <img src="images/livros/educacao/fisica.jpeg" alt="Fisica">
+      <div class="info">
+        <p class="preco">R$ 40,00</p>
+        <p class="titulo">Fisica</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Belo Horizonte - MG</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
     </div>
-    <p class="textoCategoriasImg"><b>Ficção</b></p>
-  </div>
-</a>
-<a href="pages/categorias/educacao.html">
-            <div class="divItem">
-    <div class="divBox">
-      <img src="images/iconCategorias/educacao.png" alt="" class="imagemIcon">
+    <div class="produto">
+      <img src="images/livros/educacao/download (4).jpeg" alt="Sistemas embarcados">
+      <div class="info">
+        <p class="preco">R$ 59,00</p>
+        <p class="titulo">Sistemas embarcados</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Rio de Janeiro - RJ</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
     </div>
-    <p class="textoCategoriasImg"><b>Educação</b></p>
-  </div>
-
-</div>
-</a>
-
-<h2 style="margin-left: 2%; margin-top: 2%;">Produtos</h2>
-
-<section class="secao" id="grid-secao">
-  <div class="produto">
-    <a href="../mistybook/pages/paginalivros/bleach.html">
-          <img src="images/livros/quadrinhos/bleach.jpeg" alt="bleach">
-          <div class="info">
-            <p class="preco">R$ 120,00</p>
-            <p class="titulo">Bleach</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Belo Horizonte - MG</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
+    <div class="produto">
+      <img src="images/livros/educacao/download (5).jpeg" alt="O cerebro de uma criança">
+      <div class="info">
+        <p class="preco">R$ 56,00</p>
+        <p class="titulo">O cerebro de uma criança</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Palmas - TO</b></p>
           </div>
-        </div></a>
-        <div class="produto">
-          <a href="../mistybook/pages/paginalivros/dandadan.html">
-            <img src="images/livros/quadrinhos/dandadan.jpeg" alt="dandadan">
-            <div class="info">
-              <p class="preco">R$ 56,00</p>
-              <p class="titulo">Dandadan</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>São Paulo - SP</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-          <div class="produto">
-            <a href="../mistybook/pages/paginalivros/sololeveling.html">
-            <img src="images/livros/quadrinhos/download (4).jpeg" alt="Solo leveling">
-            <div class="info">
-              <p class="preco">R$ 30,00</p>
-              <p class="titulo">Solo leveling</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>São Paulo - SP</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-          <div class="produto">
-            <a href="../mistybook/pages/paginalivros/boxbleach.html">
-            <img src="images/livros/quadrinhos/download (5).jpeg" alt="Bleach Box set 3">
-            <div class="info">
-              <p class="preco">R$ 95,00</p>
-              <p class="titulo">Bleach Box set 3</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Rio de Janeiro - RJ</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-          <div class="produto">
-            <a href="../mistybook/pages/paginalivros/spiderman.html">
-            <img src="images/livros/quadrinhos/download (6).jpeg" alt="Spiderman">
-            <div class="info">
-              <p class="preco">R$ 20,00</p>
-              <p class="titulo">Spiderman</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Colatina - ES</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-
-          <div class="produto">
-            <a href="../mistybook/pages/paginalivros/batman.html">
-            <img src="images/livros/quadrinhos/download (7).jpeg" alt="Batman">
-            <div class="info">
-              <p class="preco">R$ 25,00</p>
-              <p class="titulo">Batman</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Cuiabá - MT</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-
-          <div class="produto">
-            <a href="../mistybook/pages/paginalivros/fireforce.html">
-            <img src="images/livros/quadrinhos/Fire Force Volume 1.jpeg" alt="Fire Force volume 1">
-            <div class="info">
-              <p class="preco">R$ 15,00</p>
-              <p class="titulo">Fire Force volume 1</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Goiânia - GO</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-
-                    <div class="produto">
-                      <a href="../mistybook/pages/paginalivros/hqbatmanapiada.html">
-            <img src="images/livros/quadrinhos/HQ Batman A Piada Mortal 1° Edição Greg Cox.jpeg" alt="HQ Batman A Piada Mortal">
-            <div class="info">
-              <p class="preco">R$ 17,00</p>
-              <p class="titulo">HQ Batman A Piada Mortal</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Salvador - BA</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-          
-                              <div class="produto">
-            <img src="images/livros/quadrinhos/Hq Dc Graphic Novels Saga Definitiva_ Crise Nas Infinitas Terras, De Grant Morrison.jpeg" alt="Crise nas infinitas terras">
-            <div class="info">
-              <p class="preco">R$ 45,00</p>
-              <p class="titulo">Crise nas infinitas terras</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>São Luís - MA</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/educacao/A história do Brasil para quem tem pressa.jpeg"
+        alt="A história do Brasil para quem tem pressa">
+      <div class="info">
+        <p class="preco">R$ 34,50</p>
+        <p class="titulo">A história do Brasil para quem tem pressa</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Rio Branco - AC</b></p>
           </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/educacao/Screenshot 2025-05-19 100503.png" alt="Pre Calculo">
+      <div class="info">
+        <p class="preco">R$ 85,30</p>
+        <p class="titulo">Pré-Calculo</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Fortaleza - CE</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
 
-          <div class="produto">
-          <img src="images/livros/educacao/fisica.jpeg" alt="Fisica">
-          <div class="info">
-            <p class="preco">R$ 40,00</p>
-            <p class="titulo">Fisica</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Belo Horizonte - MG</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
+    <div class="produto">
+      <img src="images/livros/fantasia/A ascensão do dragão.jpeg" alt="A ascensão do dragão">
+      <div class="info">
+        <p class="preco">R$ 50,00</p>
+        <p class="titulo">A ascensão do dragão</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Recife - PE</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/fantasia/download (4).jpeg" alt="De sangue e cinzas">
+      <div class="info">
+        <p class="preco">R$ 78,60</p>
+        <p class="titulo">De sangue e cinzas</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Cuiabá - MT</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/fantasia/O CAMINHO DOS REIS, de Brandon Sanderson.jpeg" alt="O CAMINHO DOS REIS">
+      <div class="info">
+        <p class="preco">R$ 67,50</p>
+        <p class="titulo">O caminho dos reis, de Brandon Sanderson</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Campo Grande - MS</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/fantasia/pequeno.jpeg" alt="O pequeno principe">
+      <div class="info">
+        <p class="preco">R$ 40,00</p>
+        <p class="titulo">O Pequeno Príncipe</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Curitiba - PR</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/fantasia/Quarta Asa - Vol_ 1.jpeg" alt="Quarta Asa - Vol_ 1">
+      <div class="info">
+        <p class="preco">R$ 90,00</p>
+        <p class="titulo">Quarta Asa - Vol 1</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Porto Alegre - RS</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/ficcao/download (4).jpeg" alt="Cidade da lua sangrenta">
+      <div class="info">
+        <p class="preco">R$ 29,00</p>
+        <p class="titulo">Cidade da lua sangrentas</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Brasília - DF</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <a href="../mistybook/pages/paginalivros/produto1.html">
+        <img src="images/livros/ficcao/Dune libro.jpeg" alt="Dune">
+        <div class="info">
+          <p class="preco">R$ 56,00</p>
+          <p class="titulo">Dune</p>
+          <div class="local-favorito">
+            <div class="local">
+              <span><img src="images/iconCategorias/mapa.png"></span>
+              <p><b>Cuiabá - MT</b></b></p>
             </div>
+            <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                  alt=""></div>
           </div>
         </div>
-        <div class="produto">
-            <img src="images/livros/educacao/download (4).jpeg" alt="Sistemas embarcados">
-            <div class="info">
-              <p class="preco">R$ 59,00</p>
-              <p class="titulo">Sistemas embarcados</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Rio de Janeiro - RJ</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+    </div></a>
+    <div class="produto">
+      <img src="images/livros/ficcao/Eu Li_ Relatos de Um Gato Viajante, Hiro Arikawa - Editora Alfaguara.jpeg"
+        alt="Relatos de um gato viajante">
+      <div class="info">
+        <p class="preco">R$ 57,00</p>
+        <p class="titulo">Relatos de um gato viajante</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Teresina - PI</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/educacao/download (5).jpeg" alt="O cerebro de uma criança">
-            <div class="info">
-              <p class="preco">R$ 56,00</p>
-              <p class="titulo">O cerebro de uma criança</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Palmas - TO</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/educacao/A história do Brasil para quem tem pressa.jpeg" alt="A história do Brasil para quem tem pressa">
-            <div class="info">
-              <p class="preco">R$ 34,50</p>
-              <p class="titulo">A história do Brasil para quem tem pressa</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Rio Branco - AC</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/educacao/Screenshot 2025-05-19 100503.png" alt="Pre Calculo">
-            <div class="info">
-              <p class="preco">R$ 85,30</p>
-              <p class="titulo">Pré-Calculo</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Fortaleza - CE</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="produto">
-          <img src="images/livros/fantasia/A ascensão do dragão.jpeg" alt="A ascensão do dragão">
-          <div class="info">
-            <p class="preco">R$ 50,00</p>
-            <p class="titulo">A ascensão do dragão</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Recife - PE</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
-          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
         </div>
-        <div class="produto">
-            <img src="images/livros/fantasia/download (4).jpeg" alt="De sangue e cinzas">
-            <div class="info">
-              <p class="preco">R$ 78,60</p>
-              <p class="titulo">De sangue e cinzas</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Cuiabá - MT</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/ficcao/Resenha Flores para Algernon de Daniel Keyes.jpeg" alt="Flores para Algernon">
+      <div class="info">
+        <p class="preco">R$ 59,00</p>
+        <p class="titulo">Flores para Algernon</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>São Luís - MA</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/fantasia/O CAMINHO DOS REIS, de Brandon Sanderson.jpeg" alt="O CAMINHO DOS REIS">
-            <div class="info">
-              <p class="preco">R$ 67,50</p>
-              <p class="titulo">O caminho dos reis, de Brandon Sanderson</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Campo Grande - MS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/fantasia/pequeno.jpeg" alt="O pequeno principe">
-            <div class="info">
-              <p class="preco">R$ 40,00</p>
-              <p class="titulo">O Pequeno Príncipe</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Curitiba - PR</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/fantasia/Quarta Asa - Vol_ 1.jpeg" alt="Quarta Asa - Vol_ 1">
-            <div class="info">
-              <p class="preco">R$ 90,00</p>
-              <p class="titulo">Quarta Asa - Vol 1</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Porto Alegre - RS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-          <img src="images/livros/ficcao/download (4).jpeg" alt="Cidade da lua sangrenta">
-          <div class="info">
-            <p class="preco">R$ 29,00</p>
-            <p class="titulo">Cidade da lua sangrentas</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Brasília - DF</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
-          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
         </div>
-        <div class="produto">
-          <a href="../mistybook/pages/paginalivros/produto1.html">
-            <img src="images/livros/ficcao/Dune libro.jpeg" alt="Dune">
-            <div class="info">
-              <p class="preco">R$ 56,00</p>
-              <p class="titulo">Dune</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Cuiabá - MT</b></b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div></a>
-          <div class="produto">
-            <img src="images/livros/ficcao/Eu Li_ Relatos de Um Gato Viajante, Hiro Arikawa - Editora Alfaguara.jpeg" alt="Relatos de um gato viajante">
-            <div class="info">
-              <p class="preco">R$ 57,00</p>
-              <p class="titulo">Relatos de um gato viajante</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Teresina - PI</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/ficcao/Trilogia Cósmica + Pôster  - novo - Lacrado.jpeg" alt="Trilogia Cósmica">
+      <div class="info">
+        <p class="preco">R$ 100,00</p>
+        <p class="titulo">Trilogia Cósmica</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Manaus - AM</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/ficcao/Resenha Flores para Algernon de Daniel Keyes.jpeg" alt="Flores para Algernon">
-            <div class="info">
-              <p class="preco">R$ 59,00</p>
-              <p class="titulo">Flores para Algernon</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>São Luís - MA</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/ficcao/Trilogia Cósmica + Pôster  - novo - Lacrado.jpeg" alt="Trilogia Cósmica">
-            <div class="info">
-              <p class="preco">R$ 100,00</p>
-              <p class="titulo">Trilogia Cósmica</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Manaus - AM</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-
-                   <div class="produto">
-            <img src="images/livros/ficcao/six of crows.jpeg" alt="Six of Crows">
-            <div class="info">
-              <p class="preco">R$ 29,00</p>
-              <p class="titulo">Six of Crows</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Macapá - AP</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="produto">
-          <img src="images/livros/negocios/Como Convencer Alguém em 90 Segundos - Nicholas Boothman.jpeg" alt="Como Convencer Alguém em 90 Segundos">
-          <div class="info">
-            <p class="preco">R$ 30,00</p>
-            <p class="titulo">Como Convencer Alguém em 90 Segundos</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Vitória - ES</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
-          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
         </div>
-        <div class="produto">
-            <img src="images/livros/negocios/download (4).jpeg" alt="As armas da persuação">
-            <div class="info">
-              <p class="preco">R$ 28,70</p>
-              <p class="titulo">As armas da persuação</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Rio de Janeiro - RJ</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/negocios/Gatilhos Mentais_ O Guia Completo com Estratégias de Negócios e Comunicações Provadas Para Você.jpeg" alt="Gatilhos Mentais">
-            <div class="info">
-              <p class="preco">R$ 55,00</p>
-              <p class="titulo">Gatilhos Mentais</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Porto Alegre - RS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/negocios/isso e marketing.jpeg" alt="isso e marketing">
-            <div class="info">
-              <p class="preco">R$ 56</p>
-              <p class="titulo">Isso é Marketing</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Florianópolis - SC</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/negocios/Quem Pensa Enriquece.jpeg" alt="Quem Pensa Enriquece">
-            <div class="info">
-              <p class="preco">R$ 28,90</p>
-              <p class="titulo">Quem Pensa Enriquece</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Campo Grande - MS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
 
-          <div class="produto">
-          <img src="images/livros/religiao/Compartilhando com você o que é bom_.jpeg" alt="Café com Deus pai">
-          <div class="info">
-            <p class="preco">R$ 30,00</p>
-            <p class="titulo">Café com Deus pai</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Rio Branco - AC</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
+    <div class="produto">
+      <img src="images/livros/ficcao/six of crows.jpeg" alt="Six of Crows">
+      <div class="info">
+        <p class="preco">R$ 29,00</p>
+        <p class="titulo">Six of Crows</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Macapá - AP</b></p>
           </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
         </div>
-        <div class="produto">
-            <img src="images/livros/religiao/homo deus.jpeg" alt="homo deus">
-            <div class="info">
-              <p class="preco">R$ 16,00</p>
-              <p class="titulo">Homo deus</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Porto Velho - RO</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/religiao/hermeneutica.jpeg" alt="Hermeneutica">
-            <div class="info">
-              <p class="preco">R$ 25,00</p>
-              <p class="titulo">Hermeneutica</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Belo Horizonte - MG</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/religiao/Livro Alcorão Sagrado.jpeg" alt="Livro Alcorão Sagrado">
-            <div class="info">
-              <p class="preco">R$ 25,00</p>
-              <p class="titulo">Livro Alcorão Sagrado</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Aimorés - MG</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/religiao/download (4).jpeg" alt="Deus negro">
-            <div class="info">
-              <p class="preco">R$ 23,00</p>
-              <p class="titulo">Deus negro</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Florianópolis - SC</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
 
-          <div class="produto">
-          <img src="images/livros/romance/beijos e croissants.jpeg" alt="Beijos e croissants">
-          <div class="info">
-            <p class="preco">R$ 30,00</p>
-            <p class="titulo">Beijos e croissants</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Novo Hamburgo - RS</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
+    <div class="produto">
+      <img src="images/livros/negocios/Como Convencer Alguém em 90 Segundos - Nicholas Boothman.jpeg"
+        alt="Como Convencer Alguém em 90 Segundos">
+      <div class="info">
+        <p class="preco">R$ 30,00</p>
+        <p class="titulo">Como Convencer Alguém em 90 Segundos</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Vitória - ES</b></p>
           </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
         </div>
-        <div class="produto">
-            <img src="images/livros/romance/download (4).jpeg" alt="A Hipótese do Amor">
-            <div class="info">
-              <p class="preco">R$ 23,00</p>
-              <p class="titulo">A Hipótese do Amor</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Curitiba - RS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/negocios/download (4).jpeg" alt="As armas da persuação">
+      <div class="info">
+        <p class="preco">R$ 28,70</p>
+        <p class="titulo">As armas da persuação</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Rio de Janeiro - RJ</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/romance/eu e esse meu coração.jpeg" alt="Eu e esse meu coração">
-            <div class="info">
-              <p class="preco">R$ 56,00</p>
-              <p class="titulo">Eu e esse meu coração</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Porto Alegre - RS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/romance/livro.jpeg" alt="Nada fica no passado">
-            <div class="info">
-              <p class="preco">R$ 20,00</p>
-              <p class="titulo">Nada fica no passado</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Cuiabá - MT</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="produto">
-            <img src="images/livros/romance/roma.jpeg" alt="A cinco passos de você">
-            <div class="info">
-              <p class="preco">R$ 29,00</p>
-              <p class="titulo">A cinco passos de você</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Campo Grande - MS</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="produto">
-          <img src="images/livros/terror/A Garota do Orfanato Sombrio - Temple Matthews.jpeg" alt="A Garota do Orfanato Sombrio">
-          <div class="info">
-            <p class="preco">R$ 30,00</p>
-            <p class="titulo">A Garota do Orfanato Sombrio</p>
-            <div class="local-favorito">
-              <div class="local">
-                <span><img src="images/iconCategorias/mapa.png"></span>
-                <p><b>Fortaleza - CE</b></p>
-              </div>
-              <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-            </div>
-          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
         </div>
-        <div class="produto">
-            <img src="images/livros/terror/amigo imaginario.jpeg" alt="Amigo imaginario">
-            <div class="info">
-              <p class="preco">R$ 41,00</p>
-              <p class="titulo">Amigo imaginario</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Aracaju - SE</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img
+        src="images/livros/negocios/Gatilhos Mentais_ O Guia Completo com Estratégias de Negócios e Comunicações Provadas Para Você.jpeg"
+        alt="Gatilhos Mentais">
+      <div class="info">
+        <p class="preco">R$ 55,00</p>
+        <p class="titulo">Gatilhos Mentais</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Porto Alegre - RS</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/terror/O Homem de palha.jpeg" alt="O Homem de palha">
-            <div class="info">
-              <p class="preco">R$ 32,00</p>
-              <p class="titulo">O Homem de palha</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Boa Vista - RR</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/negocios/isso e marketing.jpeg" alt="isso e marketing">
+      <div class="info">
+        <p class="preco">R$ 56</p>
+        <p class="titulo">Isso é Marketing</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Florianópolis - SC</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/terror/o homem do giz.jpeg" alt="O homem do giz">
-            <div class="info">
-              <p class="preco">R$ 20,00</p>
-              <p class="titulo">O homem do giz</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Macapá - AP</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/negocios/Quem Pensa Enriquece.jpeg" alt="Quem Pensa Enriquece">
+      <div class="info">
+        <p class="preco">R$ 28,90</p>
+        <p class="titulo">Quem Pensa Enriquece</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Campo Grande - MS</b></p>
           </div>
-          <div class="produto">
-            <img src="images/livros/terror/it a coisa.jpeg" alt="it a coisa">
-            <div class="info">
-              <p class="preco">R$ 56</p>
-              <p class="titulo">It a coisa</p>
-              <div class="local-favorito">
-                <div class="local">
-                  <span><img src="images/iconCategorias/mapa.png"></span>
-                  <p><b>Belo Horizonte - MG</b></p>
-                </div>
-                <div class="favorito"><img src="images/iconCategorias/coracao.png" alt=""></div>
-              </div>
-            </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="images/livros/religiao/Compartilhando com você o que é bom_.jpeg" alt="Café com Deus pai">
+      <div class="info">
+        <p class="preco">R$ 30,00</p>
+        <p class="titulo">Café com Deus pai</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Rio Branco - AC</b></p>
           </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/religiao/homo deus.jpeg" alt="homo deus">
+      <div class="info">
+        <p class="preco">R$ 16,00</p>
+        <p class="titulo">Homo deus</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Porto Velho - RO</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/religiao/hermeneutica.jpeg" alt="Hermeneutica">
+      <div class="info">
+        <p class="preco">R$ 25,00</p>
+        <p class="titulo">Hermeneutica</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Belo Horizonte - MG</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/religiao/Livro Alcorão Sagrado.jpeg" alt="Livro Alcorão Sagrado">
+      <div class="info">
+        <p class="preco">R$ 25,00</p>
+        <p class="titulo">Livro Alcorão Sagrado</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Aimorés - MG</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/religiao/download (4).jpeg" alt="Deus negro">
+      <div class="info">
+        <p class="preco">R$ 23,00</p>
+        <p class="titulo">Deus negro</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Florianópolis - SC</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
 
-</section>
+    <div class="produto">
+      <img src="images/livros/romance/beijos e croissants.jpeg" alt="Beijos e croissants">
+      <div class="info">
+        <p class="preco">R$ 30,00</p>
+        <p class="titulo">Beijos e croissants</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Novo Hamburgo - RS</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/romance/download (4).jpeg" alt="A Hipótese do Amor">
+      <div class="info">
+        <p class="preco">R$ 23,00</p>
+        <p class="titulo">A Hipótese do Amor</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Curitiba - RS</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/romance/eu e esse meu coração.jpeg" alt="Eu e esse meu coração">
+      <div class="info">
+        <p class="preco">R$ 56,00</p>
+        <p class="titulo">Eu e esse meu coração</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Porto Alegre - RS</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/romance/livro.jpeg" alt="Nada fica no passado">
+      <div class="info">
+        <p class="preco">R$ 20,00</p>
+        <p class="titulo">Nada fica no passado</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Cuiabá - MT</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/romance/roma.jpeg" alt="A cinco passos de você">
+      <div class="info">
+        <p class="preco">R$ 29,00</p>
+        <p class="titulo">A cinco passos de você</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Campo Grande - MS</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="images/livros/terror/A Garota do Orfanato Sombrio - Temple Matthews.jpeg"
+        alt="A Garota do Orfanato Sombrio">
+      <div class="info">
+        <p class="preco">R$ 30,00</p>
+        <p class="titulo">A Garota do Orfanato Sombrio</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Fortaleza - CE</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/terror/amigo imaginario.jpeg" alt="Amigo imaginario">
+      <div class="info">
+        <p class="preco">R$ 41,00</p>
+        <p class="titulo">Amigo imaginario</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Aracaju - SE</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/terror/O Homem de palha.jpeg" alt="O Homem de palha">
+      <div class="info">
+        <p class="preco">R$ 32,00</p>
+        <p class="titulo">O Homem de palha</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Boa Vista - RR</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/terror/o homem do giz.jpeg" alt="O homem do giz">
+      <div class="info">
+        <p class="preco">R$ 20,00</p>
+        <p class="titulo">O homem do giz</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Macapá - AP</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="produto">
+      <img src="images/livros/terror/it a coisa.jpeg" alt="it a coisa">
+      <div class="info">
+        <p class="preco">R$ 56</p>
+        <p class="titulo">It a coisa</p>
+        <div class="local-favorito">
+          <div class="local">
+            <span><img src="images/iconCategorias/mapa.png"></span>
+            <p><b>Belo Horizonte - MG</b></p>
+          </div>
+          <div class="favorito"><button class="btn-add-carrinho"><img src="images/iconCategorias/carrinhoAdd.png"
+                alt=""></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <script>
+    document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+      button.addEventListener('click', function () {
+        const produto = this.closest('.produto');
+        const titulo = produto.querySelector('.titulo').innerText;
+        const preco = produto.querySelector('.preco').innerText;
+        const imagem = produto.querySelector('img').src; // <-- alterado aqui
+
+        const item = { titulo, preco, imagem };
+
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        carrinho.push(item);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+        alert(`"${titulo}" adicionado ao carrinho!`);
+      });
+    });
+  </script>
 
 
-<!--Script do carousel-->
-<script>
-  const track = document.querySelector('.carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
+  <!--Script do carousel-->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  function updateCarousel() {
-    const itemWidth = items[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-  }
+    function updateCarousel() {
+      const itemWidth = items[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
 
-  function goToNext() {
-    currentIndex = (currentIndex + 1) % items.length;
+    function goToNext() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateCarousel();
+    }
+
+    function goToPrev() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateCarousel();
+    }
+
+    nextButton.addEventListener('click', () => {
+      goToNext();
+      resetInterval();
+    });
+
+    prevButton.addEventListener('click', () => {
+      goToPrev();
+      resetInterval();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+
+    // Auto slide
+    let autoSlide = setInterval(goToNext, 3000); // troca a cada 3 segundos
+
+    function resetInterval() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(goToNext, 3000);
+    }
+
     updateCarousel();
-  }
-
-  function goToPrev() {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    updateCarousel();
-  }
-
-  nextButton.addEventListener('click', () => {
-    goToNext();
-    resetInterval();
-  });
-
-  prevButton.addEventListener('click', () => {
-    goToPrev();
-    resetInterval();
-  });
-
-  window.addEventListener('resize', updateCarousel);
-
-  // Auto slide
-  let autoSlide = setInterval(goToNext, 3000); // troca a cada 3 segundos
-
-  function resetInterval() {
-    clearInterval(autoSlide);
-    autoSlide = setInterval(goToNext, 3000);
-  }
-
-  updateCarousel();
-</script>
+  </script>
 
 </body>
+
 </html>

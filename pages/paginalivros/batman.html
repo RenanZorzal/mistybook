@@ -26,7 +26,27 @@
 
             <div class="right-section">
                 <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-                <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+                <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="pages/meus-anuncios.html">Meus Anúncios</a>
+            <a href="pages/minhas-compras.html">Minhas Compras</a>
+          </div>
+        </div>
+        <script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+        </script>
                 <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
                 <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
                 <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>

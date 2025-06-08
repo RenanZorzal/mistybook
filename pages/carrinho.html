@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/categorias.css">
-    <link rel="stylesheet" href="../css/meusanuncios.css">
-    
+    <link rel="stylesheet" href="../css/carrinho.css">
 </head>
 <body>
-    <header>
+  <header>
         <div class="navbar">
           <div class="left-section">
-            <div class="logo">
+            <div class="logo" >
+              <a href="../index.html">
               <img src="../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
-              MistyBook
+              <p class="nomePrincipal">MistyBook</p></a>
             </div>
           </div>
           
@@ -27,7 +27,7 @@
           </div>
       
           <div class="right-section">
-            <a href="../mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+            <a href="../pages/mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
             <div class="dropdown">
           <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
             <img src="images/iconCategorias/sacola.png" alt="Sacola">
@@ -56,7 +56,7 @@
           </div>
         </div>
       
-<div class="subnavbar">
+          <div class="subnavbar">
     <a href="../pages/categorias/romance.html">Romance</a>
     <a href="../pages/categorias/fantasia.html">Fantasia</a>
     <a href="../pages/categorias/terror.html">Terror</a>
@@ -68,62 +68,57 @@
   </div>
       </header>
 
-      <a href="../index.html">
-      <div class="botaovoltar">
-        <img src="../images/iconCategorias/voltar.png" alt="" class="iconvoltar">
-        <h2 class="margemhome">&nbsp;&nbsp;Home</h2>
-      </div>
-      </a>
+  <h2 style="text-align: center;">Carrinho de Compras</h2>
+  <div style="display: flex; justify-content: center;">
+  <div id="carrinho-container" style="width: 40%;"></div>
+  </div>
+  <div style="display: flex; justify-content: center;">
+  <button id="finalizar" onclick="finalizarCompra()" style="width: 10%;">Finalizar Compra</button>
+  </div>
 
-      <h2 class="margemcategoria">Meus anúncios</h2>
-      <section class="secao" id="grid-secao">
-  <table class="tabela-anuncios">
-    <thead>
-      <tr>
-        <th>Imagem</th>
-        <th>Título</th>
-        <th>Preço</th>
-        <th>Categoria</th>
-        <th>Status da venda</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><img src="../images/livros/quadrinhos/Fire Force Volume 1.jpeg " alt="Livro 1" width="60"></td>
-        <td>Fire force</td>
-        <td>R$ 35,00</td>
-        <td>Quadrinhos</td>
-        <td>Em andamento</td>
-        <td>
-          <button class="editar">Editar</button>
-          <button class="excluir">Excluir</button>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="../images/livros/quadrinhos/dandadan.jpeg" alt="Livro 2" width="60"></td>
-        <td>Dandadan</td>
-        <td>R$ 28,00</td>
-        <td>Quadrinhos</td>
-        <td>Concluída</td>
-        <td>
-          <button class="editar">Editar</button>
-          <button class="excluir">Excluir</button>
-        </td>
-      </tr>
-            <tr>
-        <td><img src="../images/livros/ficcao/download (4).jpeg" alt="Livro 2" width="60"></td>
-        <td>Cidade da Lua Crescente</td>
-        <td>R$ 28,00</td>
-        <td>Ficção</td>
-        <td>Em estoque</td>
-        <td>
-          <button class="editar">Editar</button>
-          <button class="excluir">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+  <script>
+    const container = document.getElementById('carrinho-container');
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    function renderCarrinho() {
+      container.innerHTML = '';
+
+      if (carrinho.length === 0) {
+        container.innerHTML = '<p style="text-align:center;">Seu carrinho está vazio.</p>';
+        document.getElementById('finalizar').style.display = 'none';
+        return;
+      }
+
+      carrinho.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'carrinho-item';
+        div.innerHTML = `
+          <img src="${item.imagem}" alt="${item.titulo}">
+          <div class="info-item">
+            <strong>${item.titulo}</strong>
+            <span>${item.preco}</span>
+          </div>
+          <button class="btn-remover" onclick="removerItem(${index})">Remover</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function removerItem(i) {
+      carrinho.splice(i, 1);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      renderCarrinho();
+    }
+
+    function finalizarCompra() {
+  alert("Compra finalizada com sucesso!");
+  localStorage.removeItem('carrinho');
+  carrinho = []; 
+  renderCarrinho();
+}
+
+
+    renderCarrinho();
+  </script>
 </body>
 </html>

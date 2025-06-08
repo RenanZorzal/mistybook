@@ -16,8 +16,9 @@
           <div class="left-section">
             <div class="logo">
               <a href="../index.html">
-              <img src="../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;"></a>
-              MistyBook
+              <img src="../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+              <p class="nomePrincipal">MistyBook</p>
+              </a>
             </div>
           </div>
           
@@ -28,7 +29,27 @@
       
           <div class="right-section">
             <a href="../pages/mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-            <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+            <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="../images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="pages/meus-anuncios.html">Meus Anúncios</a>
+            <a href="pages/minhas-compras.html">Minhas Compras</a>
+          </div>
+        </div>
+        <script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+        </script>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
@@ -37,19 +58,19 @@
         </div>
       
           <div class="subnavbar">
-    <a href="../../pages/categorias/romance.html">Romance</a>
-    <a href="../../pages/categorias/fantasia.html">Fantasia</a>
-    <a href="../../pages/categorias/terror.html">Terror</a>
-    <a href="../../pages/categorias/quadrinhos.html">Quadrinhos</a>
-    <a href="../../pages/categorias/religioso.html">Religioso</a>
-    <a href="../../pages/categorias/negocios.html">Negócios</a>
-    <a href="../../pages/categorias/ficcao.html">Ficção</a>
-    <a href="../../pages/categorias/educacao.html">Educação</a>
+    <a href="../pages/categorias/romance.html">Romance</a>
+    <a href="../pages/categorias/fantasia.html">Fantasia</a>
+    <a href="../pages/categorias/terror.html">Terror</a>
+    <a href="../pages/categorias/quadrinhos.html">Quadrinhos</a>
+    <a href="../pages/categorias/religioso.html">Religioso</a>
+    <a href="../pages/categorias/negocios.html">Negócios</a>
+    <a href="../pages/categorias/ficcao.html">Ficção</a>
+    <a href="../pages/categorias/educacao.html">Educação</a>
   </div>
       </header>
 
       
-<div style=" text-align: center;">
+<div style=" text-align: center; margin-top: 2%;">
 
   <h2 style="font-size: 28px; font-weight: 700; color: #333; margin-bottom: 20px; position: relative; display: inline-block; padding-bottom: 10px;">
     BUSCAR POR REGIÃO

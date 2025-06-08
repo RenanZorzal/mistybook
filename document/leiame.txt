@@ -24,8 +24,8 @@ navbar: Criar uma navbar
 index.html: Uma pagina inicial, vai oferecer uma opção para buscar por ebooks, livros fisicos ou acessar assinatura
 pagina01.html(tabela): Ira mostrar os produtos do vendedor em uma tabela(meus anuncios)
 pagina02.html(grid): Ir para uma pagina que vai mostrar todos os livros no determinado filtro.
-pagina03.html(formulario get): registro, login e cadastrar produto
+pagina03.html(formulario get): registro, login
 pagina04.html(mapas clicaveis): Uma pagina que tera um mapa que ao clicar ira filtrar os livros por região
 pagina05.html (landing page): Pagina que ao clicar ira provomer a assinatura de livros do site, tera 2 botões 1º Assinar e 2º voltar para o home(index.html)
-pagina06.html (carrinho de compras): Ira mostrar o carrinho de compras e usar javascript para somar o preço
+pagina06.html (cadastrar produto): Um formulario que ira usar javascript para validar o produto
 pagina07.html (sobre): Pagina que vai mostrar os membros do projeto
