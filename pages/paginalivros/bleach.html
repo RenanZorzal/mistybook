@@ -95,7 +95,7 @@
         </section>
     </main>
 
-    <section class="Caracteristicas" style="padding: 20px;">
+    <section class="caracteristicas" style="padding: 20px;">
         <div> 
         <h1>Características do produto</h1>
         </div>
@@ -121,7 +121,7 @@
         
     </section>
 
-    <script>
+     <script>
     document.querySelectorAll('.btn-add-carrinho').forEach(button => {
       button.addEventListener('click', function () {
         const produto = this.closest('.produto');
@@ -135,7 +135,7 @@
         carrinho.push(item);
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
-        alert("${titulo}" adicionado ao carrinho!);
+        alert(`"${titulo}" adicionado ao carrinho!`);
       });
     });
   </script>
