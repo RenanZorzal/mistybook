@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/icon/favicon.ico" type="image/x-icon">
     <title>MistyBook</title>
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/grid.css">
@@ -14,8 +15,9 @@
         <div class="navbar">
           <div class="left-section">
             <div class="logo">
+              <a href="../../index.html">
               <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
-              MistyBook
+              <p class="nomePrincipal">MistyBook</p></a>
             </div>
           </div>
           
@@ -25,8 +27,28 @@
           </div>
       
           <div class="right-section">
-            <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-            <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+            <a href="../mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+            <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="../../images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="../../pages/meuanuncios.html">Meus Anúncios</a>
+            <a href="../../pages/minhascompras.html">Minhas Compras</a>
+          </div>
+        </div>
+        <script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+        </script>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
@@ -46,85 +68,98 @@
   </div>
       </header>
 
-      <a href="../../index.html">
-      <div class="botaovoltar">
-        <img src="../../images/iconCategorias/voltar.png" alt="" class="iconvoltar">
-        <h2 class="margemhome">&nbsp;&nbsp;Home</h2>
-      </div>
-      </a>
+      
 
       <h2 class="margemcategoria">Fantasia</h2>
       <section class="secao" id="grid-secao">
         <div class="produto">
           <img src="../../images/livros/fantasia/A ascensão do dragão.jpeg" alt="A ascensão do dragão">
           <div class="info">
-            <p class="preco">R$ 30,00</p>
+            <p class="preco">R$ 50,00</p>
             <p class="titulo">A ascensão do dragão</p>
             <div class="local-favorito">
               <div class="local">
                 <span><img src="../../images/iconCategorias/mapa.png"></span>
-                <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                <p><b>Recife - PE</b></p>
               </div>
-              <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+              <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
             </div>
           </div>
         </div>
         <div class="produto">
             <img src="../../images/livros/fantasia/download (4).jpeg" alt="De sangue e cinzas">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 78,60</p>
               <p class="titulo">De sangue e cinzas</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Cuiabá - MT</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
           <div class="produto">
             <img src="../../images/livros/fantasia/O CAMINHO DOS REIS, de Brandon Sanderson.jpeg" alt="O CAMINHO DOS REIS">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 67,50</p>
               <p class="titulo">O caminho dos reis, de Brandon Sanderson</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Campo Grande - MS</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
           <div class="produto">
             <img src="../../images/livros/fantasia/pequeno.jpeg" alt="O pequeno principe">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 40,00</p>
               <p class="titulo">O Pequeno Príncipe</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Curitiba - PR</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
           <div class="produto">
             <img src="../../images/livros/fantasia/Quarta Asa - Vol_ 1.jpeg" alt="Quarta Asa - Vol_ 1">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 90,00</p>
               <p class="titulo">Quarta Asa - Vol 1</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Porto Alegre - RS</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
     </section>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const produto = this.closest('.produto');
+      const titulo = produto.querySelector('.titulo').innerText;
+      const preco = produto.querySelector('.preco').innerText;
+      const imagem = produto.querySelector('img').src; // <-- alterado aqui
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
 </body>
 </html>

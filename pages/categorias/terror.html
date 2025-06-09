@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/icon/favicon.ico" type="image/x-icon">
     <title>MistyBook</title>
     <link rel="stylesheet" href="../../css/navbar.css">
     <link rel="stylesheet" href="../../css/grid.css">
@@ -14,8 +15,9 @@
         <div class="navbar">
           <div class="left-section">
             <div class="logo">
+              <a href="../../index.html">
               <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
-              MistyBook
+              <p class="nomePrincipal">MistyBook</p></a>
             </div>
           </div>
           
@@ -25,8 +27,28 @@
           </div>
       
           <div class="right-section">
-            <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-            <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/82/82632.png" alt="Sacola"></div></a>
+            <a href="../mapa.html"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+            <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="../../images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="../../pages/meuanuncios.html">Meus Anúncios</a>
+            <a href="../../pages/minhascompras.html">Minhas Compras</a>
+          </div>
+        </div>
+        <script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+        </script>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
             <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho"></div></a>
@@ -46,12 +68,7 @@
   </div>
       </header>
 
-      <a href="../../index.html">
-      <div class="botaovoltar">
-        <img src="../../images/iconCategorias/voltar.png" alt="" class="iconvoltar">
-        <h2 class="margemhome">&nbsp;&nbsp;Home</h2>
-      </div>
-      </a>
+      
 
       <h2 class="margemcategoria">Terror</h2>
       <section class="secao" id="grid-secao">
@@ -63,51 +80,51 @@
             <div class="local-favorito">
               <div class="local">
                 <span><img src="../../images/iconCategorias/mapa.png"></span>
-                <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                <p><b>Fortaleza - CE</b></p>
               </div>
-              <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+              <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
             </div>
           </div>
         </div>
         <div class="produto">
             <img src="../../images/livros/terror/amigo imaginario.jpeg" alt="Amigo imaginario">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 41,00</p>
               <p class="titulo">Amigo imaginario</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Aracaju - SE</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
           <div class="produto">
             <img src="../../images/livros/terror/O Homem de palha.jpeg" alt="O Homem de palha">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 32,00</p>
               <p class="titulo">O Homem de palha</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Boa Vista - RR</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
           <div class="produto">
             <img src="../../images/livros/terror/o homem do giz.jpeg" alt="O homem do giz">
             <div class="info">
-              <p class="preco">R$ 56</p>
+              <p class="preco">R$ 20,00</p>
               <p class="titulo">O homem do giz</p>
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Macapá - AP</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -119,12 +136,30 @@
               <div class="local-favorito">
                 <div class="local">
                   <span><img src="../../images/iconCategorias/mapa.png"></span>
-                  <p><b>Minas Gerais - MG</b><br>Bairro Cruzeiro</p>
+                  <p><b>Belo Horizonte - MG</b></p>
                 </div>
-                <div class="favorito"><img src="../../images/iconCategorias/coracao.png" alt=""></div>
+                <div class="favorito"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
               </div>
             </div>
           </div>
     </section>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const produto = this.closest('.produto');
+      const titulo = produto.querySelector('.titulo').innerText;
+      const preco = produto.querySelector('.preco').innerText;
+      const imagem = produto.querySelector('img').src; // <-- alterado aqui
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
 </body>
 </html>
