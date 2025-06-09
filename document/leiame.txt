@@ -27,5 +27,5 @@ pagina02.html(grid): Ir para uma pagina que vai mostrar todos os livros no deter
 pagina03.html(formulario get): registro, login
 pagina04.html(mapas clicaveis): Uma pagina que tera um mapa que ao clicar ira filtrar os livros por região
 pagina05.html (landing page): Pagina que ao clicar ira provomer a assinatura de livros do site, tera 2 botões 1º Assinar e 2º voltar para o home(index.html)
-pagina06.html (cadastrar produto): Um formulario que ira usar javascript para validar o produto
+pagina06.html (carrinho): Javascript no carrinho de compras
 pagina07.html (sobre): Pagina que vai mostrar os membros do projeto
