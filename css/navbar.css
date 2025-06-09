@@ -111,7 +111,7 @@
   position: absolute;
   top: 110%;         /* Alinha abaixo do ícone */
   left: 50%;         /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Corrige para centralizar perfeitamente */
+  transform: translateX(-80%); /* Corrige para centralizar perfeitamente */
   background-color: white;
   min-width: 160px;
   z-index: 1000;
@@ -134,3 +134,5 @@
 .show {
   display: block;
 }
+
+
