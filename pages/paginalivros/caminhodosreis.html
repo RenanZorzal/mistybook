@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/navbar.css" >
+    <link rel="stylesheet" href="../../css/paginadecompra.css">
+    <link rel="shortcut icon" href="../../images/icon/favicon.ico" type="image/x-icon">
+    <title>Pré-Calculo</title>
+</head>
+<body>
+    <header>
+  <div class="navbar">
+    <div class="left-section">
+      <div class="logo">
+        <a href="../../index.html">
+                    <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;"></a>
+        MistyBook
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Buscar livro">
+      <span class="icon">🔍</span>
+    </div>
+
+    <div class="right-section">
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+      <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="pages/meuanuncios.html">Meus Anúncios</a>
+            <a href="pages/minhascompras.html">Minhas Compras</a>
+          </div>
+        </div>
+<script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+           function toggleProfileDropdown() {
+    document.getElementById("profile-dropdown-menu").classList.toggle("show");
+  }
+
+  // Fecha os dropdowns se clicar fora
+  window.onclick = function (event) {
+    if (!event.target.closest('.dropdown')) {
+      document.getElementById("dropdown-menu").classList.remove("show");
+      document.getElementById("profile-dropdown-menu").classList.remove("show");
+    }
+  };
+        </script>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
+      <a href="./pages/carrinho.html">
+          <div class="icon-button"><img src="./images/iconCategorias/carrinho.png" alt="Carrinho">
+          </div>
+        </a>
+      <div class="dropdown">
+  <div class="icon-button dropdown-toggle" onclick="toggleProfileDropdown()">
+    <img src="images/iconCategorias/perfil.png" alt="Perfil">
+  </div>
+  <div id="profile-dropdown-menu" class="dropdown-menu">
+    <a href="pages/cliente/login.html">Login</a>
+    <a href="pages/registro.html">Registre-se</a>
+    <a href="pages/perfil.html">Meu Perfil</a>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="subnavbar">
+    <a href="#">Romance</a>
+    <a href="#">Aventura</a>
+    <a href="#">Terror</a>
+    <a href="#">Fantasia</a>
+    <a href="#">Suspense</a>
+    <a href="#">Infantil</a>
+    <a href="#">HQs</a>
+    <a href="#">Autoajuda</a>
+</div>
+</header>
+
+<br>
+<br>
+<main class="produto-container">
+    <section class="produto-imagem">
+        <h1>O Caminho dos Reis</h1>
+        <img src="../../images/Livros/Fantasia/O CAMINHO DOS REIS, de Brandon Sanderson.jpeg" alt="Livro Caminho dos Reis">
+        <div class="avaliacao">
+            <span class="estrelas">★★★★★</span>
+            <span class="nota">4.8</span>
+        </div>
+        <p class="localizacao">
+            <span>📍 Vitória - ES | 17 de Jan, 2025</span>
+        </p>
+    </section>
+
+    <section class="produto-detalhes">
+        <h2>R$ 67,50</h2>
+        <label for="cep">Digite seu Cep</label>
+        <input type="text" id="cep" placeholder="00000-000">
+        <div class="botoes">
+            <button class="botao-carrinho">🛒 Carrinho</button>
+            <button class="botao-chat">💬 Chat</button>
+        </div>
+    </section>
+</main>
+<section class="caracteristicas" style="padding: 20px;">
+        <div>
+         <h1>Características do produto</h1>
+     </div>
+         <ul>
+             <p><strong>Categoria:</strong> Fantasia</pp>
+             <p><strong>Condição:</strong> Usado</p>
+
+         </ul>
+        <ul>
+              <p><strong>Autor:</strong> Brandon Sanderson</p>
+             <p><strong>Tipo:</strong> Aluguel</p>
+        </ul>
+    </section>
+
+<section class="produto-container" style="padding: 20px;">
+    <h2>Descrição do produto</h2>
+    <p>Roshar é um mundo de pedras e tempestades. Essas estranhas tormentas, de incrível poder, varrem o terreno
+        rochoso
+        com tanta frequência que terminaram moldando não apenas a ecologia, mas também a civilização. Animais que se
+        escondem em conchas, árvores de galhos rígidos e uma vegetação que se retrai e se revela. As cidades só
+        podem
+        ser construídas onde a topografia oferece abrigo.
+        Já se passaram séculos desde a queda das dez ordens conhecidas como os Cavaleiros Radiantes, mas suas
+        Armaduras
+        e Espadas Fractais permanecem: objetos místicos que transformam seres comuns em guerreiros praticamente
+        invencíveis. Homens dão seus reinos em troca das Espadas Fractais. Guerras são travadas por elas, e são elas
+        que
+        garantem a vitória.
+
+        Uma dessas guerras ocorre em uma paisagem inóspita conhecida como Planícies Quebradas. Lá, Kaladin, que
+        abandonou seus estudos de medicina em troca de uma lança para proteger seu irmão mais novo, foi reduzido à
+        escravidão. Agora, em meio a um conflito que parece não fazer sentido, no qual dez exércitos lutam
+        isoladamente
+        contra um único inimigo, Kaladin busca manter seus homens enquanto sonda os outros líderes.
+
+        O Luminobre Dalinar Kholin comanda um dos exércitos. Assim como seu irmão, o falecido rei, ele é fascinado
+        por
+        um texto antigo chamado “O caminho dos reis”. As visões dos tempos antigos e dos Cavaleiros Radiantes o
+        fazem
+        duvidar até da própria sanidade.
+
+        Do outro lado do oceano, a jovem Shallan, ainda inexperiente, procura realizar seu treinamento com a
+        Luminosa
+        Jasnah Kholin, a sobrinha herege de Dalinar. Embora aprecie o aprendizado, a motivação de Shallan não é tão
+        nobre assim. Enquanto planeja um roubo um tanto ousado, a pesquisa que faz para Jasnah sugere segredos dos
+        Cavaleiros Radiantes ― e a verdadeira causa da guerra.
+
+        Após mais de dez anos de planejamento e construção deste universo único, “O caminho dos reis” é o fantástico
+        capítulo de abertura de Os Relatos da Guerra das Tempestades, uma obra-prima de grande magnitude que
+        continua a
+        ser elaborada.</p>
+        <p>
+            Foto real do livro.
+
+            Livro Carimbado na lateral e nas primeiras páginas.
+
+            NÃO INTERFERE NA LEITURA
+
+
+            livro adquirido de biblioteca particular.**
+
+            Caso tenha dúvidas, não exite em nos chamar.
+
+            Estamos à disposição.
+
+
+        </p>
+    </section>
+</body>
+</html>
+
+</body>
+</html>
