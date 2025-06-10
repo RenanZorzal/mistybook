@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #ea6666 0%, #000000 100%); /* Gradiente atraente */
+    color: #fff; /* Texto branco para contraste com o gradiente */
+}
+
+.landing-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para efeito glassmorphism */
+    padding: clamp(20px, 2.5vw + 10px, 30px) clamp(15px, 2.5vw + 5px, 40px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 950px;
+    width: 90%;
+    backdrop-filter: blur(10px); /* Efeito de desfoque para o glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: clamp(50px, 10vw, 70px); /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 15px;
+}
+
+.landing-container h1 {
+    font-size: clamp(2em, 1.5em + 2vw, 2.8em); /* Tamanho do título principal */
+    margin-bottom: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.landing-container h2 {
+    font-size: clamp(1.4em, 1em + 1.2vw, 2em); /* Tamanho do subtítulo */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* Cor mais suave para o subtítulo */
+    font-weight: 500;
+}
+
+.tagline {
+    font-size: clamp(1em, 0.9em + 0.3vw, 1.2em);
+    margin-bottom: 35px;
+    color: #d0d0d0; /* Cor suave para a tagline */
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Layout responsivo para as features */
+    gap: clamp(20px, 1.5vw + 10px, 25px);
+    margin-bottom: 40px;
+}
+
+.feature-box {
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo das caixas de feature */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.feature-box:hover {
+    transform: translateY(-8px); /* Efeito de elevação no hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box img {
+    max-width: 100%;
+    height: clamp(120px, 5vw + 100px, 150px); /* Altura responsiva para consistência */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.feature-box h3 {
+    font-size: clamp(1.3em, 1.2em + 0.3vw, 1.5em);
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.feature-box p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #cccccc; /* Cor do texto nas caixas de feature */
+}
+
+.subscribe-button {
+    display: inline-block;
+    background-color: #ff6b6b; /* Cor vibrante para o botão */
+    color: white;
+    padding: clamp(14px, 1.8vw, 16px) clamp(28px, 3.5vw, 32px);
+    text-decoration: none;
+    font-size: clamp(1.15em, 1.1em + 0.2vw, 1.3em);
+    font-weight: bold;
+    border-radius: 50px; /* Botão em formato de pílula */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.subscribe-button:hover {
+    background-color: #ff4757; /* Cor mais escura no hover */
+    transform: translateY(-3px) scale(1.03); /* Efeito de leve zoom e elevação */
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Empilha os botões verticalmente */
+    align-items: center; /* Centraliza os botões */
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 20px; /* Espaçamento acima do container de botões */
+}
+
+.secondary-button {
+    display: inline-block;
+    background-color: transparent; /* Fundo transparente */
+    color: #e0e0e0; /* Cor do texto similar ao subtítulo */
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: auto; /* Ajusta a largura ao conteúdo */
+}
+
+.secondary-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Leve destaque no hover */
+    color: #fff; /* Texto mais claro no hover */
+    border-color: rgba(255, 255, 255, 0.5);
+}

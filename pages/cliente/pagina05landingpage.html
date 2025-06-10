@@ -3,112 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/navbar.css" >
-    <link rel="stylesheet" href="../../css/landingpage.css">
+    <link rel="stylesheet" href="../../css/landingpage_subscription.css">
     <link rel="shortcut icon" href="../../images/icon/favicon.ico" type="image/x-icon">
-    <title>Duna1</title>
+    <title>Assine MistyBook - Sua Aventura Literária Começa Aqui!</title>
 </head>
 <body>
-    <header>
-  <div class="navbar">
-    <div class="left-section">
-      <div class="logo">
-        <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
-        MistyBook
+  <div class="landing-container">
+    <div class="logo-container">
+        <img src="../../images/Logovetor.png" alt="MistyBook Logo" class="logo-image">
+        <h1>MistyBook</h1>
+    </div>
+
+    <h2>Sua Aventura Literária Começa Aqui!</h2>
+    <p class="tagline">Descubra mundos incríveis e histórias apaixonantes com a assinatura MistyBook.</p>
+
+    <div class="features-grid">
+      <div class="feature-box">
+        
+        <h3>Curadoria Exclusiva</h3>
+        <p>Receba livros selecionados por especialistas todo mês, descobrindo novos mundos com nossa curadoria literária.</p>
+      </div>
+      <div class="feature-box">
+        
+        <h3>Leia Sem Limites</h3>
+        <p>Assine e receba livros selecionados direto na sua porta ou acesse nossa vasta biblioteca digital — sem complicações.</p>
+      </div>
+      <div class="feature-box">
+        
+        <h3>Seu Próximo Favorito</h3>
+        <p>Deixe a MistyBook te surpreender com histórias que você vai amar, encontrando seu próximo livro inesquecível.</p>
       </div>
     </div>
 
-    <div class="search-box">
-      <input type="text" placeholder="Buscar livro">
-      <span class="icon">🔍</span>
-    </div>
-
-    <div class="right-section">
-      <a href="#"><div class="icon-button"><img src="../../images/iconCategorias/localizacao.png" alt="Localização"></div></a>
-      <div class="dropdown">
-          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
-            <img src="images/iconCategorias/sacola.png" alt="Sacola">
-          </div>
-          <div id="dropdown-menu" class="dropdown-menu">
-            <a href="pages/meuanuncios.html">Meus Anúncios</a>
-            <a href="pages/minhascompras.html">Minhas Compras</a>
-          </div>
-        </div>
-<script>
-          function toggleDropdown() {
-            document.getElementById("dropdown-menu").classList.toggle("show");
-          }
-
-          // Fecha o dropdown se clicar fora dele
-          window.onclick = function (event) {
-            if (!event.target.closest('.dropdown')) {
-              document.getElementById("dropdown-menu").classList.remove("show");
-            }
-          };
-           function toggleProfileDropdown() {
-    document.getElementById("profile-dropdown-menu").classList.toggle("show");
-  }
-
-  // Fecha os dropdowns se clicar fora
-  window.onclick = function (event) {
-    if (!event.target.closest('.dropdown')) {
-      document.getElementById("dropdown-menu").classList.remove("show");
-      document.getElementById("profile-dropdown-menu").classList.remove("show");
-    }
-  };
-        </script>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
-      <a href="../../pages/carrinho.html">
-          <div class="icon-button"><img src="../../images/iconCategorias/carrinho.png" alt="Carrinho">
-          </div>
-        </a>
-      <div class="dropdown">
-  <div class="icon-button dropdown-toggle" onclick="toggleProfileDropdown()">
-    <img src="images/iconCategorias/perfil.png" alt="Perfil">
-  </div>
-  <div id="profile-dropdown-menu" class="dropdown-menu">
-    <a href="pages/login/login.html">Login</a>
-    <a href="pages/login/cadastro.html">Registre-se</a>
-    <a href="pages/perfil.html">Meu Perfil</a>
-  </div>
-</div>
+    <!-- Substitua 'pagina_real_de_assinatura.html' pelo link correto da sua página de assinatura -->
+    <div class="button-container">
+      <a href="pagina_real_de_assinatura.html" class="subscribe-button">Assine Já e Desbloqueie Seu Universo Literário!</a>
+      <!-- Adiciona o botão "Não obrigado" que volta para a index.html -->
+      <a href="../../index.html" class="secondary-button">Não obrigado</a>
     </div>
   </div>
-
-  <div class="subnavbar">
-    <a href="#">Romance</a>
-    <a href="#">Aventura</a>
-    <a href="#">Terror</a>
-    <a href="#">Fantasia</a>
-    <a href="#">Suspense</a>
-    <a href="#">Infantil</a>
-    <a href="#">HQs</a>
-    <a href="#">Autoajuda</a>
-  </div>
-</header>
-<body>
-
-  <a href="index.html" class="back-button">Voltar para a home</a>
-
-  <div class="container">
-    <div class="creatives">
-      <div class="creative-box">
-        <img src="https://via.placeholder.com/300x200?text=Crie+seu+universo" alt="Criativo 1">
-        <p>Descubra novos mundos todo mês com nossa curadoria literária exclusiva.</p>
-      </div>
-      <div class="creative-box">
-        <img src="https://via.placeholder.com/300x200?text=Leia+sem+limites" alt="Criativo 2">
-        <p>Assine e receba livros selecionados direto na sua porta — sem complicações.</p>
-      </div>
-      <div class="creative-box">
-        <img src="https://via.placeholder.com/300x200?text=Seu+próximo+favorito" alt="Criativo 3">
-        <p>Deixe a MistyBook te surpreender com histórias que você vai amar.</p>
-      </div>
-    </div>
-
-    <button class="subscribe-button">Assine já!</button>
-  </div>
-
 </body>
 </html>
