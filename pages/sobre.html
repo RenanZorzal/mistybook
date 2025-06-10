@@ -1,50 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre o grupo</title>
+    <link rel="shortcut icon" href="../images/icon/favicon.ico" type="image/x-icon">
+    <title>MistyBook</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link rel="stylesheet" href="../css/sobre.css">
+  <style>
+
+
+  </style>
 </head>
 <body>
-    
-    <h1>Sobre nós</h1>
-
-<p>Com muito esforço e dedicação, nós, alunos da Fumec, do curso Ciência da computação, trazemos um site de livros que
-    busca
-    melhorar, dar acessibilidade e facilitar o acessos de livros aos brasileiros.</p>
 
 
-<h2>Renan Zorzal (Lider do grupo)</h2>
-<figure>
-    <img src="../images/fotos/Renan.jpg" alt="">
-</figure>
+  <header>
+        <div class="navbar">
+          <div class="left-section">
+            <div class="logo" >
+              <a href="../index.html">
+              <img src="../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+              <p class="nomePrincipal">MistyBook</p></a>
+            </div>
+          </div>
+          
+          <div class="search-box">
+            <input type="text" placeholder="Buscar livro">
+            <span class="icon">🔍</span>
+          </div>
+      
+          <div class="right-section">
+            <a href="../pages/mapa.html"><div class="icon-button"><img src="../images/iconCategorias/localizacao.png" alt="Localização"></div></a>
+            <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="../images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="../pages/meuanuncios.html">Meus Anúncios</a>
+            <a href="../pages/minhascompras.html">Minhas Compras</a>
+          </div>
+        </div>
+<script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
 
-<h2>Luis Felipe (Programador back-end)</h2>
-<figure>
-    <img src="../images/fotos/Luis.jpg" alt="">
-</figure>
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+           function toggleProfileDropdown() {
+    document.getElementById("profile-dropdown-menu").classList.toggle("show");
+  }
 
-<h2>Luciano Pao Wen Wen(Escritor)</h2>
-<figure>
-    <img src="" alt="">
-</figure>
+  // Fecha os dropdowns se clicar fora
+  window.onclick = function (event) {
+    if (!event.target.closest('.dropdown')) {
+      document.getElementById("dropdown-menu").classList.remove("show");
+      document.getElementById("profile-dropdown-menu").classList.remove("show");
+    }
+  };
+        </script>
+        <a href="#" onclick="alert('Contato: mistybook@gmail.com'); return false;">
+          <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div>
+        </a>
+        <a href="#" onclick="alert('Você não tem novas notificações'); return false;">
+          <div class="icon-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações">
+          </div>
+        </a>
+            <a href="#">
+          <div class="icon-button"><img src="../images/iconCategorias/carrinho.png" alt="Carrinho">
+          </div>
+        </a>
+            <div class="dropdown">
+  <div class="icon-button dropdown-toggle" onclick="toggleProfileDropdown()">
+    <img src="../images/iconCategorias/perfil.png" alt="Perfil">
+  </div>
+  <div id="profile-dropdown-menu" class="dropdown-menu">
+    <a href="../pages/login/login.html">Login</a>
+    <a href="../pages/login/cadastro.html">Registre-se</a>
+    <a href="../pages/perfil.html">Meu Perfil</a>
+  </div>
+</div>
+          </div>
+        </div>
+      
+          <div class="subnavbar">
+    <a href="../pages/categorias/romance.html">Romance</a>
+    <a href="../pages/categorias/fantasia.html">Fantasia</a>
+    <a href="../pages/categorias/terror.html">Terror</a>
+    <a href="../pages/categorias/quadrinhos.html">Quadrinhos</a>
+    <a href="../pages/categorias/religioso.html">Religioso</a>
+    <a href="../pages/categorias/negocios.html">Negócios</a>
+    <a href="../pages/categorias/ficcao.html">Ficção</a>
+    <a href="../pages/categorias/educacao.html">Educação</a>
+  </div>
+      </header>
+  <h1>Sobre nós</h1>
+  <p>Com muito esforço e dedicação, nós, alunos da FUMEC, do curso Ciência da Computação, criamos um site de livros que busca melhorar, dar acessibilidade e facilitar o acesso de livros aos brasileiros.</p>
 
-<h2>Gabrielly Abreu(Designer)</h2>
-<figure>
-    <img src="../images/fotos/Gabi.jpg" alt="">
-</figure>
+  <div class="container">
 
-<h2>Davi Teixeira(Programadorn back-end)</h2>
-<figure>
-    <img src="" alt="">
-</figure>
+    <!-- Renan -->
+    <div class="card">
+      <div class="card-header" style="background-image: url('../images/fotos/Renan.jpg');">
+        <div class="role">CEO & Fundador</div>
+      </div>
+      <div class="card-body">
+        <div class="name">Renan Zorzal Berger</div>
+        <div class="description">Responsável por administrar o projeto e auxiliou no desenvolvenvimento do código das páginas.</div>
+      </div>
+      <div class="card-footer">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
 
-<h2>Samuel dos Santos(Designer)</h2>
-<figure>
-    <img src="../images/fotos/Samuel.jpg" alt="">
-</figure>
+    <!-- Luciano -->
+    <div class="card">
+      <div class="card-header">
+        <div class="role">Escritor & Curador</div>
+      </div>
+      <div class="card-body">
+        <div class="name">Luciano Wen</div>
+        <div class="description">Responsável pelos textos do site e revisões.</div>
+      </div>
+      <div class="card-footer">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
 
-</body>
-</html>
+    <!-- Davi -->
+    <div class="card">
+      <div class="card-header">
+        <div class="role">Desenvolvedor Front-End</div>
+      </div>
+      <div class="card-body">
+        <div class="name">Davi Teixeira</div>
+        <div class="description">Responsável por auxiliar no Front-End das páginas.</div>
+      </div>
+      <div class="card-footer">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+
+    <!-- Gabrielly -->
+    <div class="card">
+      <div class="card-header" style="background-image: url('../images/fotos/Gabi.jpg');">
+        <div class="role">Designer Gráfico</div>
+      </div>
+      <div class="card-body">
+        <div class="name">Gabrielly Abreu</div>
+        <div class="description">Responsável pelo design do site e prototipação das telas.</div>
+      </div>
+      <div class="card-footer">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+
+    <!-- Samuel -->
+    <div class="card">
+      <div class="card-header" style="background-image: url('../images/fotos/Samuel.jpg');">
+        <div class="role">Designer Gráfico</div>
+      </div>
+      <div class="card-body">
+        <div class="name">Samuel Moura</div>
+        <div class="description">Responsável pelo design do site e auxiliou no Front-End do site.</div>
+      </div>
+
+    </div>
+
+    <!-- Luis -->
+    <div class="card">
+      <div class="card-header" style="background-image: url('../images/fotos/Luis.jpg');">
+        <div class="role">Desenvolvedor Front-End</div>
+      </div>
+      <div class="card-body">
+        <div class="name">Luis</div>
+        <div class="description">Responsável por auxiliar no Front-End das páginas.</div>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
