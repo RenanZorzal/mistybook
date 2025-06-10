@@ -85,7 +85,7 @@
   </div>
   <div id="profile-dropdown-menu" class="dropdown-menu">
     <a href="pages/login/login.html">Login</a>
-    <a href="pages/registro.html">Registre-se</a>
+    <a href="pages/login/cadastro.html">Registre-se</a>
     <a href="pages/perfil.html">Meu Perfil</a>
   </div>
 </div>
@@ -933,7 +933,7 @@
         const produto = this.closest('.produto');
         const titulo = produto.querySelector('.titulo').innerText;
         const preco = produto.querySelector('.preco').innerText;
-        const imagem = produto.querySelector('img').src; // <-- alterado aqui
+        const imagem = produto.querySelector('img').src; 
 
         const item = { titulo, preco, imagem };
 

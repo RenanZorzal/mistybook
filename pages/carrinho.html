@@ -99,49 +99,66 @@
   <button id="finalizar" onclick="finalizarCompra()" style="width: 10%;">Finalizar Compra</button>
   </div>
 
-  <script>
-    const container = document.getElementById('carrinho-container');
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+<script>
+  const container = document.getElementById('carrinho-container');
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    function renderCarrinho() {
-      container.innerHTML = '';
+  function calcularTotal() {
+    return carrinho.reduce((total, item) => {
+      const preco = parseFloat(item.preco.replace('R$', '').replace(',', '.'));
+      return total + preco;
+    }, 0).toFixed(2);
+  }
 
-      if (carrinho.length === 0) {
-        container.innerHTML = '<p style="text-align:center;">Seu carrinho está vazio.</p>';
-        document.getElementById('finalizar').style.display = 'none';
-        return;
-      }
+  function renderCarrinho() {
+    container.innerHTML = '';
 
-      carrinho.forEach((item, index) => {
-        const div = document.createElement('div');
-        div.className = 'carrinho-item';
-        div.innerHTML = `
-          <img src="${item.imagem}" alt="${item.titulo}">
-          <div class="info-item">
-            <strong>${item.titulo}</strong>
-            <span>${item.preco}</span>
-          </div>
-          <button class="btn-remover" onclick="removerItem(${index})">Remover</button>
-        `;
-        container.appendChild(div);
-      });
+    if (carrinho.length === 0) {
+      container.innerHTML = '<p style="text-align:center;">Seu carrinho está vazio.</p>';
+      document.getElementById('finalizar').style.display = 'none';
+      return;
     }
 
-    function removerItem(i) {
-      carrinho.splice(i, 1);
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-      renderCarrinho();
-    }
+    carrinho.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'carrinho-item';
+      div.innerHTML = `
+        <img src="${item.imagem}" alt="${item.titulo}">
+        <div class="info-item">
+          <strong>${item.titulo}</strong>
+          <span>${item.preco}</span>
+        </div>
+        <button class="btn-remover" onclick="removerItem(${index})">Remover</button>
+      `;
+      container.appendChild(div);
+    });
 
-    function finalizarCompra() {
-  alert("Compra finalizada com sucesso!");
-  localStorage.removeItem('carrinho');
-  carrinho = []; 
-  renderCarrinho();
-}
+    // Mostra o valor total abaixo dos itens
+    const total = calcularTotal();
+    const totalDiv = document.createElement('div');
+    totalDiv.style.textAlign = 'center';
+    totalDiv.style.marginTop = '20px';
+    totalDiv.innerHTML = `<strong>Total: R$ ${total.replace('.', ',')}</strong>`;
+    container.appendChild(totalDiv);
 
+    document.getElementById('finalizar').style.display = 'inline-block';
+  }
 
+  function removerItem(i) {
+    carrinho.splice(i, 1);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
     renderCarrinho();
-  </script>
+  }
+
+  function finalizarCompra() {
+    alert("Compra finalizada com sucesso!");
+    localStorage.removeItem('carrinho');
+    carrinho = [];
+    renderCarrinho();
+  }
+
+  renderCarrinho();
+</script>
+
 </body>
 </html>
