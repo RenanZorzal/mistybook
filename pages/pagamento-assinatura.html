@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icon/favicon.ico" type="image/x-icon">
+    <title>MistyBook - Pagamento de Assinatura</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+    <!-- <link rel="stylesheet" href="../css/carrinho.css"> --><!-- CSS do carrinho removido, pois pode não ser relevante -->
+    <link rel="stylesheet" href="../css/pagamento.css"> <!-- Adicionar estilos específicos para pagamento aqui -->
+    <style>
+        /* Estilos básicos para o formulário de pagamento (idealmente em pagamento.css) */
+
+    #pagamento-container {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #pagamento-container h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    #pagamento-container p {
+      margin-bottom: 10px;
+    }
+
+
+
+
+
+
+    #confirmar-pagamento {
+      padding: 12px 25px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    #confirmar-pagamento:hover {
+      background-color: #218838;
+    }
+
+    .flex-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+        <div class="navbar">
+          <div class="left-section">
+            <div class="logo" >
+              <a href="../index.html">
+              <img src="../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+              <p class="nomePrincipal">MistyBook</p></a>
+            </div>
+          </div>
+          
+<div class="search-box">
+ <input type="text" placeholder="Buscar livro">
+            <span class="icon">🔍</span>
+          </div>
+      
+          <div class="right-section">
+        <a href="../pages/mapa.html"><div class="icon-button"><img src="../images/iconCategorias/localizacao.png" alt="Localização"></div></a>
+            <div class="dropdown">
+              <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+                <img src="../images/iconCategorias/sacola.png" alt="Sacola">
+              </div>
+              <div id="dropdown-menu" class="dropdown-menu">
+                <a href="../pages/meuanuncios.html">Meus Anúncios</a>
+                <a href="../pages/minhascompras.html">Minhas Compras</a>
+              </div>
+            </div>
+            <script>
+              function toggleDropdown() {
+                document.getElementById("dropdown-menu").classList.toggle("show");
+              }
+
+              function toggleProfileDropdown() {
+                document.getElementById("profile-dropdown-menu").classList.toggle("show");
+              }
+
+              // Fecha os dropdowns se clicar fora (esta definição sobrescreve a anterior)
+              window.onclick = function (event) {
+                if (!event.target.closest('.dropdown')) {
+                  var dropdownMenu = document.getElementById("dropdown-menu");
+                  var profileDropdownMenu = document.getElementById("profile-dropdown-menu");
+                  if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove("show");
+                  }
+                  if (profileDropdownMenu && profileDropdownMenu.classList.contains('show')) {
+                    profileDropdownMenu.classList.remove("show");
+                  }
+                }
+              };
+            </script>
+            <a href="#" onclick="alert('Contato: mistybook@gmail.com'); return false;">
+              <div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div>
+            </a>
+            <a href="#" onclick="alert('Você não tem novas notificações'); return false;">
+              <div class="icon-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações">
+              </div>
+            </a>
+            <a href="../pages/carrinho.html"> 
+              <div class="icon-button"><img src="../images/iconCategorias/carrinho.png" alt="Carrinho"></div>
+            </a>
+            <div class="dropdown">
+              <div class="icon-button dropdown-toggle" onclick="toggleProfileDropdown()">
+                <img src="../images/iconCategorias/perfil.png" alt="Perfil">
+              </div>
+              <div id="profile-dropdown-menu" class="dropdown-menu">
+                <a href="../pages/login/login.html">Login</a>
+                <a href="../pages/login/cadastro.html">Registre-se</a>
+                <a href="../pages/perfil.html">Meu Perfil</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="subnavbar">
+            <a href="../pages/categorias/romance.html">Romance</a>
+            <a href="../pages/categorias/fantasia.html">Fantasia</a>
+            <a href="../pages/categorias/terror.html">Terror</a>
+            <a href="../pages/categorias/quadrinhos.html">Quadrinhos</a>
+            <a href="../pages/categorias/religioso.html">Religioso</a>
+            <a href="../pages/categorias/negocios.html">Negócios</a>
+            <a href="../pages/categorias/ficcao.html">Ficção</a>
+            <a href="../pages/categorias/educacao.html">Educação</a>
+        </div>
+  </header>
+
+  <h2 style="text-align: center; margin-top: 20px;">Pagamento da Assinatura</h2>
+
+  <div class="centered-container">
+    <div id="pagamento-container">
+      <h3>Detalhes da Assinatura</h3>
+      <p><strong>Plano:</strong> Plano Premium MistyBook</p>
+      <p><strong>Preço:</strong> R$ 29,90/mês</p>
+
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center;">
+      <h3>Pagamento via PIX</h3>
+      
+      <img src="../images/qrcode.png" alt="" >
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="centered-container">
+    <button id="confirmar-pagamento" type="submit" form="form-pagamento">Confirmar Pagamento</button>
+  </div>
+
+  <script>
+    document.getElementById('confirmar-pagamento').addEventListener('click', function(event) {
+    
+      event.preventDefault(); 
+      alert('Pagamento concluído com sucesso!');
+      window.location.href = '../index.html';
+    });
+  </script>
+</body>
+</html>
