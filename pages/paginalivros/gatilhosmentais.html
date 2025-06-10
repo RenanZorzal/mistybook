@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/navbar.css" >
+    <link rel="stylesheet" href="../../css/paginadecompra.css">
+    <link rel="shortcut icon" href="../../images/icon/favicon.ico" type="image/x-icon">
+    <title>A ascensão do dragão</title>
+</head>
+<body>
+    <header>
+  <div class="navbar">
+    <div class="left-section">
+      <div class="logo">
+        <a href="../../index.html">
+                    <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;"></a>
+        MistyBook
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Buscar livro">
+      <span class="icon">🔍</span>
+    </div>
+
+    <div class="right-section">
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
+      <div class="dropdown">
+          <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
+            <img src="images/iconCategorias/sacola.png" alt="Sacola">
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="pages/meuanuncios.html">Meus Anúncios</a>
+            <a href="pages/minhascompras.html">Minhas Compras</a>
+          </div>
+        </div>
+<script>
+          function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+          }
+
+          // Fecha o dropdown se clicar fora dele
+          window.onclick = function (event) {
+            if (!event.target.closest('.dropdown')) {
+              document.getElementById("dropdown-menu").classList.remove("show");
+            }
+          };
+           function toggleProfileDropdown() {
+    document.getElementById("profile-dropdown-menu").classList.toggle("show");
+  }
+
+  // Fecha os dropdowns se clicar fora
+  window.onclick = function (event) {
+    if (!event.target.closest('.dropdown')) {
+      document.getElementById("dropdown-menu").classList.remove("show");
+      document.getElementById("profile-dropdown-menu").classList.remove("show");
+    }
+  };
+        </script>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
+      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
+      <a href="./pages/carrinho.html">
+          <div class="icon-button"><img src="./images/iconCategorias/carrinho.png" alt="Carrinho">
+          </div>
+        </a>
+      <div class="dropdown">
+  <div class="icon-button dropdown-toggle" onclick="toggleProfileDropdown()">
+    <img src="images/iconCategorias/perfil.png" alt="Perfil">
+  </div>
+  <div id="profile-dropdown-menu" class="dropdown-menu">
+    <a href="pages/login/login.html">Login</a>
+    <a href="pages/login/cadastro.html">Registre-se</a>
+    <a href="pages/perfil.html">Meu Perfil</a>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="subnavbar">
+    <a href="#">Romance</a>
+    <a href="#">Aventura</a>
+    <a href="#">Terror</a>
+    <a href="#">Fantasia</a>
+    <a href="#">Suspense</a>
+    <a href="#">Infantil</a>
+    <a href="#">HQs</a>
+    <a href="#">Autoajuda</a>
+</div>
+</header>
+
+<br>
+<br>
+<main class="produto-container">
+    <section class="produto-imagem">
+
+<h1>Gatilhos mentais</h1>
+            <img src="../../images/livros/negocios/Gatilhos Mentais_ O Guia Completo com Estratégias de Negócios e Comunicações Provadas Para Você.jpeg" alt="Gatilhos mentais">
+            <div class="avaliacao">
+                <span class="estrelas">★★★★★</span>
+                <span class="nota">4.5 </span>
+            </div>
+            <p class="localizacao">
+                <span>📍 Porto Alegre - RS | 16/05/25, 19:25</span>
+            </p>
+        </section>
+
+        <section class="produto-detalhes">
+            <h2>R$ 55,00</h2>
+            <label for="cep">Digite seu Cep</label>
+            <input type="text" id="cep" placeholder="00000-000">
+            <div class="botoes">
+                <button class="botao-carrinho">🛒 Carrinho</button>
+                <button class="botao-chat">💬 Chat</button>
+            </div>
+        </section>
+    </main>
+    <section class="Caracteristicas" style="padding: 20px;">
+        <div>
+            <h1>Características do produto</h1>
+        </div>
+        <ul>
+            <p><strong>Categoria:</strong> Negócios</pp>
+            <p><strong>Condição:</strong> Usados</p>
+
+        </ul>
+        <ul>
+            <p><strong>Autor:</strong> Gustavo Ferreira</p>
+            <p><strong>Tipo:</strong> Venda / Aluguel</p>
+        </ul>
+    </section>
+
+    <section class="produto-container" style="padding: 20px;">
+        <h2>Descrição do produto</h2>
+        <p>
+            Foto real do livro.
+
+            A Coroa de Ferro dos Gatilhos Mentais (e os 4 gatilhos que realmente importam na sua comunicação). A Joia da
+            Coroa (e o principal motivo que o impede de realizar mais vendas). 18 Gatilhos Emocionais (e como você ativa
+            as principais emoções no seu cliente para que ele compre). Os 6 Gatilhos Lógicos (que ajudam seu cliente a
+            confirmar a decisão de compra). O Poder do Gatilho mais explosivo de todos... A Sua Arma Mais Poderosa na
+            hora de convencer seu cliente a comprar de você. O Segredo de Aristóteles para mensagens altamente
+            persuasivas (esse segredo ficou guardado por anos em grupos fechados).
+
+            Caso tenha dúvidas, não exite em nos chamar.
+
+            Estamos à disposição.
+    </p>
+</section>
+</body>
+</html>
+
+</body>
+</html>
