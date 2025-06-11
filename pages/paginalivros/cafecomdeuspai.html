@@ -127,8 +127,8 @@
             <label for="cep">Digite seu Cep</label>
             <input type="text" id="cep" placeholder="00000-000">
             <div class="botoes">
-                <button class="botao-carrinho">🛒 Carrinho</button>
-                <button class="botao-chat">💬 Chat</button>
+                <div class="favorito" style="text-align: center;"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
+                
             </div>
         </section>
     </main>
@@ -154,5 +154,24 @@
             A vida é cheia de desafios. Não são poucas as vezes em que acordamos pensando em uma fórmula que resolva todos os nossos problemas, tanto os que já conhecemos como aqueles que enfrentaremos um dia. Porém, a verdade é que o único momento capaz de ser vivido é o presente, e nada adianta gastarmos tempo com questões que fogem do nosso controle. Agora, imagine ter a chance de parar por alguns instantes e desfrutar de um agradável momento com alguém que tenha a resposta para todas as nossas preocupações. Essa é a experiência que você encontrará no decorrer destas páginas. Ao longo de devocionais diários, lhe convidamos para um encontro com Deus que, além de ensinar uma nova forma de apreciar uma xícara de café, mostrará como a vida também pode ser saboreada. Sim, o Pai deseja tomar café com você. E o sabor desse grão será incomparável a tudo o que já provou.
         </p>
     </section>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const titulo = document.querySelector('h1').innerText;
+      const preco = document.querySelector('.produto-detalhes h2').innerText;
+      const imagem = document.querySelector('.produto-imagem img').src;
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
+
+</body>
 </body>
 </html>

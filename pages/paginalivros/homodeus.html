@@ -127,8 +127,8 @@
             <label for="cep">Digite seu Cep</label>
             <input type="text" id="cep" placeholder="00000-000">
             <div class="botoes">
-                <button class="botao-carrinho">🛒 Carrinho</button>
-                <button class="botao-chat">💬 Chat</button>
+                <div class="favorito" style="text-align: center;"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
+                
             </div>
         </section>
     </main>
@@ -154,5 +154,24 @@
             Neste Homo Deus: uma breve história do amanhã, Yuval Noah Harari, autor do estrondoso best-seller Sapiens: uma breve história da humanidade, volta a combinar ciência, história e filosofia, desta vez para entender quem somos e descobrir para onde vamos. Sempre com um olhar no passado e nas nossas origens, Harari investiga o futuro da humanidade em busca de uma resposta tão difícil quanto essencial: depois de séculos de guerras, fome e pobreza, qual será nosso destino na Terra? A partir de uma visão absolutamente original de nossa história, ele combina pesquisas de ponta e os mais recentes avanços científicos à sua conhecida capacidade de observar o passado de uma maneira inteiramente nova. Assim, descobrir os próximos passos da evolução humana será também redescobrir quem fomos e quais caminhos tomamos para chegar até aqui.
         </p>
     </section>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const titulo = document.querySelector('h1').innerText;
+      const preco = document.querySelector('.produto-detalhes h2').innerText;
+      const imagem = document.querySelector('.produto-imagem img').src;
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
+
+</body>
 </body>
 </html>

@@ -131,8 +131,8 @@
       <label for="cep">Digite seu Cep</label>
       <input type="text" id="cep" placeholder="00000-000">
       <div class="botoes">
-        <button class="botao-carrinho">🛒 Carrinho</button>
-        <button class="botao-chat">💬 Chat</button>
+        <div class="favorito" style="text-align: center;"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
+        
       </div>
     </section>
   </main>
@@ -157,8 +157,24 @@
            Uma estonteante mistura de aventura e misticismo, ecologia e política, este romance ganhador dos prêmios Hugo e Nebula deu início a uma das mais épicas histórias de toda a ficção científica. Duna é um triunfo da imaginação, que influenciará a literatura para sempre.Esta edição inédita, com introdução de Neil Gaiman, apresenta ao leitor o universo fantástico criado por Herbert e que será adaptado ao cinema por Denis Villeneuve, diretor de A chegada e de Blade Runner 2049.
         </p>
     </section>
-</body>
-</html>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const titulo = document.querySelector('h1').innerText;
+      const preco = document.querySelector('.produto-detalhes h2').innerText;
+      const imagem = document.querySelector('.produto-imagem img').src;
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
 
 </body>
+
 </html>

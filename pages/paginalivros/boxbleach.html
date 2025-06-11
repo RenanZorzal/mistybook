@@ -127,8 +127,8 @@
             <label for="cep">Digite seu Cep</label>
             <input type="text" id="cep" placeholder="00000-000">
             <div class="botoes">
-                <button class="botao-carrinho">🛒 Carrinho</button>
-                <button class="botao-chat">💬 Chat</button>
+                <div class="favorito" style="text-align: center;"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
+                
             </div>
         </section>
     </main>
@@ -156,5 +156,24 @@
             O terceiro e último box de mangás de Bleach. Este conjunto completa a série, apresentando os volumes 49 a 74 com um desconto substancial em relação à compra individual, juntamente com um livreto exclusivo contendo uma galeria de arte da capa e uma entrevista com o autor, além de um pôster colorido frente e verso.
         </p>
     </section>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const titulo = document.querySelector('h1').innerText;
+      const preco = document.querySelector('.produto-detalhes h2').innerText;
+      const imagem = document.querySelector('.produto-imagem img').src;
+
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
+
+</body>
 </body>
 </html>

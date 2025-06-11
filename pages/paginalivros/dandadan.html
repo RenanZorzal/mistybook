@@ -127,8 +127,8 @@
       <label for="cep">Digite seu Cep</label>
       <input type="text" id="cep" placeholder="00000-000">
       <div class="botoes">
-        <button class="botao-carrinho">🛒 Carrinho</button>
-        <button class="botao-chat">💬 Chat</button>
+        <div class="favorito" style="text-align: center;"><button class="btn-add-carrinho"><img src="../../images/iconCategorias/carrinhoAdd.png" alt=""></div>
+        
       </div>
     </section>
   </main>
@@ -153,8 +153,24 @@
            Essa é a história de Momo Ayase, uma colegial que acredita na existência de espíritos e seu colega de classe que ela apelida de "Okarun", um viciado em alienígenas, OVNIs e fenômenos inexplicáveis! Como Okarun não acredita em fantasmas e espíritos e Momo não acredita em alienígenas e OVNIs, eles decidem provar um ao outro que suas crenças são reais! Assim, Momo vai até um hospital abandonado onde há relatos de avistamento de OVNIs e Okarun vai até um túnel assombrado... Será esse o começo de uma história de amor?! Aqui abrem-se as cortinas da ação desenfreada envolvendo o oculto, o misterioso e o bizarro!
         </p>
     </section>
-</body>
-</html>
+    <script>
+  document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+    button.addEventListener('click', function () {
+      const titulo = document.querySelector('h1').innerText;
+      const preco = document.querySelector('.produto-detalhes h2').innerText;
+      const imagem = document.querySelector('.produto-imagem img').src;
 
+      const item = { titulo, preco, imagem };
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert(`"${titulo}" adicionado ao carrinho!`);
+    });
+  });
+</script>
+
+</body>
 </body>
 </html>
