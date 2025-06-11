@@ -5,37 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/navbar.css" >
     <link rel="stylesheet" href="../../css/paginadecompra.css">
+    <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="../../css/grid.css">
+  <link rel="stylesheet" href="../../css/home.css">
+  <link rel="stylesheet" href="../../css/categorias.css">
     <link rel="shortcut icon" href="../../images/icon/favicon.ico" type="image/x-icon">
     <title>Sangue e cinzas</title>
 </head>
 <body>
     <header>
-  <div class="navbar">
-    <div class="left-section">
-      <div class="logo">
-        <a href="../../index.html">
-                    <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;"></a>
-        MistyBook
+    <div class="navbar">
+      <div class="left-section">
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../images/Logovetor.png" alt="Logo" style="width: 100px; height: 80px;">
+            <p class="nomePrincipal">MistyBook</p>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="search-box">
-      <input type="text" placeholder="Buscar livro">
-      <span class="icon">🔍</span>
-    </div>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar livro">
+        <span class="icon"><img class="lupa" src="../../images/lupa.webp" alt="lupa"></span>
+      </div>
 
-    <div class="right-section">
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Localização"></div></a>
-      <div class="dropdown">
+      <div class="right-section">
+        <a href="pages/mapa.html">
+          <div class="icon-button"><img src="../../images/iconCategorias/localizacao.png" alt="Localização">
+          </div>
+        </a>
+        <div class="dropdown">
           <div class="icon-button dropdown-toggle" onclick="toggleDropdown()">
-            <img src="images/iconCategorias/sacola.png" alt="Sacola">
+            <img src="../../images/iconCategorias/sacola.png" alt="Sacola">
           </div>
           <div id="dropdown-menu" class="dropdown-menu">
-            <a href="pages/meuanuncios.html">Meus Anúncios</a>
-            <a href="pages/minhascompras.html">Minhas Compras</a>
+            <a href="../../pages/meuanuncios.html">Meus Anúncios</a>
+            <a href="../../pages/minhascompras.html">Minhas Compras</a>
           </div>
         </div>
-<script>
+        <script>
           function toggleDropdown() {
             document.getElementById("dropdown-menu").classList.toggle("show");
           }
@@ -58,36 +66,46 @@
     }
   };
         </script>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2950/2950714.png" alt="Chat"></div></a>
-      <a href="#"><div class="icon-button"><img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Notificações"></div></a>
-      <a href="./pages/carrinho.html">
-          <div class="icon-button"><img src="./images/iconCategorias/carrinho.png" alt="Carrinho">
+
+        <a href="#" onclick="alert('Contato: mistybook@gmail.com'); return false;">
+          <div class="icon-button"><img src="../../images/iconCategorias/mensagens.png" alt="Chat"></div>
+        </a>
+        <a href="#" onclick="alert('Você não tem novas notificações'); return false;">
+          <div class="icon-button">
+            <img src="../../images/iconCategorias/notificacao.png" alt="Notificações">
           </div>
         </a>
-      <div class="dropdown">
+        <a href="../../pages/carrinho.html">
+          <div class="icon-button"><img src="../../images/iconCategorias/carrinho.png" alt="Carrinho">
+          </div>
+        </a>
+<div class="dropdown">
   <div class="icon-button dropdown-toggle" onclick="toggleProfileDropdown()">
-    <img src="images/iconCategorias/perfil.png" alt="Perfil">
+    <img src="../../images/iconCategorias/perfil.png" alt="Perfil">
   </div>
   <div id="profile-dropdown-menu" class="dropdown-menu">
-    <a href="pages/login/login.html">Login</a>
-    <a href="pages/login/cadastro.html">Registre-se</a>
-    <a href="pages/perfil.html">Meu Perfil</a>
+    <a href="../../pages/login/login.html">Login</a>
+    <a href="../../pages/login/cadastro.html">Registre-se</a>
+    <a href="../../pages/perfil.html">Meu Perfil</a>
   </div>
 </div>
-    </div>
-  </div>
 
-  <div class="subnavbar">
-    <a href="#">Romance</a>
-    <a href="#">Aventura</a>
-    <a href="#">Terror</a>
-    <a href="#">Fantasia</a>
-    <a href="#">Suspense</a>
-    <a href="#">Infantil</a>
-    <a href="#">HQs</a>
-    <a href="#">Autoajuda</a>
-</div>
-</header>
+      </div>
+    </div>
+
+    <div class="subnavbar">
+      <a href="../../pages/categorias/romance.html">Romance</a>
+      <a href="../../pages/categorias/fantasia.html">Fantasia</a>
+      <a href="../../pages/categorias/terror.html">Terror</a>
+      <a href="../../pages/categorias/quadrinhos.html">Quadrinhos</a>
+      <a href="../../pages/categorias/religioso.html">Religioso</a>
+      <a href="../../pages/categorias/negocios.html">Negócios</a>
+      <a href="../../pages/categorias/ficcao.html">Ficção</a>
+      <a href="../../pages/categorias/educacao.html">Educação</a>
+      <a href="../../pages/sobre.html">Sobre</a>
+      <a href="../../pages/cliente/pagina05landingpage.html">Assinatura</a>
+    </div>
+  </header>
 
 <br>
 <br>
