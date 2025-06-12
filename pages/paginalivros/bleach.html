@@ -160,24 +160,23 @@
         
     </section>
 
-     <script>
-    document.querySelectorAll('.btn-add-carrinho').forEach(button => {
-      button.addEventListener('click', function () {
-        const produto = this.closest('.produto');
-        const titulo = produto.querySelector('.titulo').innerText;
-        const preco = produto.querySelector('.preco').innerText;
-        const imagem = produto.querySelector('img').src; 
-
-        const item = { titulo, preco, imagem };
-
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        carrinho.push(item);
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
-        alert(`"${titulo}" adicionado ao carrinho!`);
+    <script>
+      document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+        button.addEventListener('click', function () {
+          const titulo = document.querySelector('h2').innerText;
+          const preco = document.querySelector('.produto-detalhes h2').innerText;
+          const imagem = document.querySelector('.produto-imagem img').src;
+    
+          const item = { titulo, preco, imagem };
+    
+          let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          carrinho.push(item);
+          localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    
+          alert(`"${titulo}" adicionado ao carrinho!`);
+        });
       });
-    });
-  </script>
+    </script>
 
 </body>
 </html>
